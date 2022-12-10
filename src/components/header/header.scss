@@ -76,6 +76,9 @@ button{
 }
 .bg-bus{
     position: relative;
+    .bg-car{
+        width: 2000px;
+    }
     .bus-car{
         position: absolute;
         left: 50%;

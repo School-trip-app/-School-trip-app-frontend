@@ -9,7 +9,7 @@ function Headern() {
         <p>Let s start your journey with us m your drean will come true</p>
         <button><h3>Explore Destinations</h3></button>
         <div className='bg-bus'>
-        <img src={bgbus} alt='bus'/>
+        <img src={bgbus} alt='bus' className='bg-car'/>
         <img className='bus-car' src={bus} alt='bus'/>
         </div>
     </div>
