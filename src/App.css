@@ -41,3 +41,87 @@ li{
     margin: 4rem 2rem;
   }  
 }
+.slick-slide > div {
+  margin: 0 10px;
+}
+.slick-list {
+  margin: 0 -10px;
+}
+
+.card {
+  width: 390px;
+  border: 1px solid #fff;
+  background: #f8f9fa;
+  overflow: hidden;
+  border-radius: 0px 0px 5px 5px;
+  box-shadow: 0 10px 15px rgb(0 9 94 / 6%);
+  height: 400px;
+  color: #7EA0FF;
+  cursor: pointer;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.card-top h1 {
+  font-size: 0.9rem;
+  margin: 20px;
+}
+
+.card-top > img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  background: black;
+}
+
+.card-bottom {
+  margin: 10px 20px;
+}
+
+.category {
+  position: relative;
+}
+.category::before {
+  content: '';
+  background: rgb(255, 61, 61);
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  right: 0;
+  height: 2px;
+}
+.card-text{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.card-text:first-child{
+  color: #00095E;
+}
+.card-text .price{
+  color: #7EA0FF;
+}
+.card-date{
+  display: flex;
+  align-items: center;
+}
+.card-date h3{
+  color: #7EA0FF;
+  font-size: 25px;
+}
+
+.card-date .days{
+  margin-left: 30px;
+  color: #00095E;
+}
+.card-date .month{
+  background-color:rgba(126,160,255,0.05) ;
+  padding: 9px 15px;
+  border-radius: 19px;
+  -webkit-border-radius: 19px;
+  -moz-border-radius: 19px;
+  -ms-border-radius: 19px;
+  -o-border-radius: 19px;
+}
