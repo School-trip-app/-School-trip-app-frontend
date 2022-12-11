@@ -74,15 +74,14 @@ function Travel() {
             </div>
             <div className="card-bottom">
               <div className='card-text'>
-            <h1>{item.title}</h1>
-            <h1 className='price'>{item.price}</h1>
+                <h1>{item.title}</h1>
+                <h1 className='price'>{item.price}</h1>
+              </div>
+              <div className='card-date'>
+                <h3 className='month'>12 Jan - 18 Jan</h3>
+                <h3 className='days'>5 Days</h3>
+              </div>
             </div>
-            <div className='card-date'>
-             <h3 className='month'>12 Jan - 18 Jan</h3>
-             <h3 className='days'>5 Days</h3>
-            </div>
-            </div>
-
           </div>
         ))}
       </Slider>

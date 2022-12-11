@@ -7,10 +7,10 @@ import Travel from './components/travel/Travel';
 function App() {
   return (
     <div className="App">
-     <Navbar/>
-     <Headern/>
-     <Travel/>
-     <About/>
+      <Navbar />
+      <Headern />
+      <Travel />
+      <About />
     </div>
   );
 }
