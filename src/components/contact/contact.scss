@@ -1,0 +1,64 @@
+@import '../../mixin/mixin.scss';
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap');
+.contact-title{
+  color: #00095e;
+  font-family: "Josefin Sans", sans-serif;  
+  font-size: 27px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+textarea {
+  font-family:inherit;
+  width: 94%;
+  height: 140px;
+  padding: 22px 20px;
+  resize: none;
+  outline: none;
+  background:transparent;
+}
+
+input[type=text] {
+  width: 45%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  margin-right: 30px;
+  outline: none;
+
+}
+input[type=email] {
+  width: 45%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  outline: none;
+
+}
+.contact-info{
+margin-bottom:25 px;
+
+}
+.contact-info__icon{
+  margin-right:20px;
+}
+.media{
+  display: flex;
+  align-items: flex-start;
+}
+.button {
+  font-family: "Josefin Sans",sans-serif;
+  background-color: #4CAF50; 
+  border: none;
+  color: white;
+  padding: 18px 44px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.sbtbutton {
+  background-color: white;
+  color: black;
+  border: 2px solid #e7e7e7;
+}
