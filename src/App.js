@@ -13,10 +13,10 @@ function App() {
         <Contact/>
         
 
-     <Navbar/>
+     {/* <Navbar/>
      <Headern/>
      <Travel/>
-     <About/>
+     <About/> */}
     </div>
   );
 }

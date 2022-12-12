@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './contact.scss'
 import Navbar from '../navbar/Navbar';
 import Carousel from "./Carousel"
-import { ImHome } from "react-icons/im";
+import { FaHome,FaEnvelope,FaPhoneSquareAlt} from "react-icons/fa";
 
 
 const onSubmit = (e) => {
@@ -28,34 +28,52 @@ function Contact() {
 
 
       <div className="container mt-5">
-      <h2 className="contact-title">Get in Touch</h2>
-      <div className='row '>
+        <h2 className="contact-title">Get in Touch</h2>
+       
 
-        
-     
-      <form onSubmit={onSubmit}>
-        <div className="col-lg-8">
-            <div className='row'>
+        <div className='grid-container-element'>
+        <form onSubmit={onSubmit}>
+            <div className="col-lg-8 grid-child-element">
+              
+              <textarea className="" id="message" required placeholder='Enter Message' cols="30" rows="9" />
+              <input className="" type="text" id="name" required placeholder='Enter your name' />
+              <input className="" type="email" id="email" required placeholder='Enter email address' />
+              <input className="" type="text" id="subject" required placeholder='Enter subject' />
+
 
             </div>
-          <textarea className="" id="message" required placeholder='Enter Message'  cols="30" rows="9"/>
-          <input className="" type="text" id="name" required placeholder='Enter your name' />
-          <input className="" type="email" id="email" required placeholder='Enter email address' />
-          <input className="" type="text" id="subject" required placeholder='Enter subject' />
-
+            <button className="button sbtbutton" type="submit">
+              {formStatus}
+            </button>
+          </form>
+        <div className='col-lg-8'>
           
-        </div>    
-        <button className="button sbtbutton" type="submit">
-          {formStatus}
-        </button>
-      </form>
-      
+        </div>
+        <div>
+      <div className='grid-child-element'>
+        <FaHome/> 
+        <h5>Amman,jordan</h5>
+         <p>airport street,marj al-hamam birdge </p>
+      </div>
+      <div>
+      <FaPhoneSquareAlt/>
+       <h5>+9627799886633</h5>
+      <p>sun to Thu 9am to 5pm </p>
+      </div>
+      <div><FaEnvelope/>
+        <h5>404Team@email.com</h5>
+          <p>send us your query  anytime </p>
+      </div>
+          </div>
+          </div>
+         
 
 
 
-    </div>
-    </div>
+
+        </div>
      
+
     </>
   )
 }
