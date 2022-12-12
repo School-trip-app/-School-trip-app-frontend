@@ -1,11 +1,10 @@
 import React from 'react'
-import Register from './components/register/Register';
-import Trips from './components/trips/Trips';
+import AboutPage from './components/aboutPage/AboutPage';
+
 function AppTest() {
   return (
-    <>
-      <Trips />
-      {/* <Register /> */}
+    <>      
+      <AboutPage />
     </>
   )
 }
