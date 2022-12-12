@@ -1,0 +1,24 @@
+.video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.video a {
+  position: relative;
+}
+.video a h1 {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  font-weight: normal;
+  left: 50%;
+  font-weight: 600;
+  font-size: 45px;
+  transform: translateX(-50%);
+}
+.video a img {
+  width: 1000px;
+  border-radius: 20px;
+}/*# sourceMappingURL=video.css.map */

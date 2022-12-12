@@ -1,0 +1,26 @@
+@import '../../mixin/mixin.scss';
+
+.video{
+   @include display-center;
+   padding-top:100px;
+   background-color: #fff;
+   padding-bottom:100px;
+   a{
+    position: relative;
+    h1{
+        color:#fff;
+        position: absolute;
+        top:50%;
+        font-weight: normal;
+        left:50%;
+        font-weight: 600;
+        font-size: 45px;
+        transform: translateX(-50%);
+    }
+   img{
+    width:1000px;
+    border-radius: 20px;
+
+   }
+}
+}

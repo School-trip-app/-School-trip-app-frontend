@@ -1,10 +1,10 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
 import Navbar from '../navbar/Navbar';
-import About from '../aboutus/About';
+import About from '../../pages/About/aboutus/About';
 import { FaLinkedinIn } from "react-icons/fa";
 import { GoMarkGithub } from "react-icons/go";
-import hamza from "./abt-img/hamza.jpg";
+import hamza from "./abt-img/hamza.jfif";
 import ibraheem from "./abt-img/ibraheem.jpg";
 import mhmd from "./abt-img/mhmd.jpg";
 import suhaib from "./abt-img/SuhiabAlnji.jpg";
@@ -30,8 +30,8 @@ export default class AboutPage extends React.Component {
                   <div class="col-sm-12 col-md-12 mb-4">
                     <h3 class="text-center mt-4 text-secondary" style={{ 'padding': '50px' }}>Our Team</h3>
                   </div>
-                  <div className="row" style={{ 'display': 'grid' },
-                    { 'justify-content': 'center' }}>
+                  <div className="row" style={{ 'display': 'grid'},
+{ 'justify-content': 'center' }}>
                     <div className="col-md-3" style={{ 'margin-right': '100px' }}>
                       <div className="text-center" >
                         <img src={suhaib} class="w-100 rounded-circle" alt="Suhaib" />
