@@ -1,16 +1,15 @@
 import './App.css';
-import About from './components/aboutus/About';
+import About from './pages/About/aboutus/About';
 import Headern from './components/header/Headern';
-import Navbar from './components/navbar/Navbar';
 import Travel from './components/travel/Travel';
-
+import Video from './components/videotour/Video';
 function App() {
   return (
-    <div className="App">
-     <Navbar/>
-     <Headern/>
-     <Travel/>
-     <About/>
+    <div >
+      <Headern />
+      <Travel />
+      <About />
+      <Video/>
     </div>
   );
 }
