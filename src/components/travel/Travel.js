@@ -5,6 +5,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { dataDigitalBestSeller } from '../../data';
 import imgGirl from '../../assets/logo.png.webp';
+import Card from '../../pages/Events/card/Card';
 
 
 function Travel() {
@@ -59,7 +60,7 @@ function Travel() {
         <h1>Upcoming Events</h1>
       </div>
       <Slider {...settings}>
-        {dataDigitalBestSeller.map((item) => (
+        {/* {dataDigitalBestSeller.map((item) => (
           <div className="card">
             <div className="card-top">
               <img
@@ -83,7 +84,13 @@ function Travel() {
               </div>
             </div>
           </div>
-        ))}
+        ))} */}
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
       </Slider>
     </div>
   )

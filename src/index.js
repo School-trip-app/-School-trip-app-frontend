@@ -24,7 +24,6 @@ root.render(
       <Route element={<Register/>} path='/register'/>
     </Routes>
     <Footer/>
-
   </Router>
 );
 
