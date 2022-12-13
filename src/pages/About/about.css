@@ -1,102 +1,106 @@
 * {
-    box-sizing: border-box;
-  }
-  
-  .top-background-about {
-    width: 100%;
-    height: 440px;
-    background-image: url('https://images.unsplash.com/photo-1624872556330-db9726f91a3f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80');
-    background-size: cover;
-    background-position: center center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .top-background-about p {
-    color: rgb(255, 255, 255);
-    font-size: xxx-large;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-family: "Josefin Sans", sans-serif;
-    font-weight: bolder;
-  }
-  
-  .about-item {
-    margin-bottom: 20px;
-    margin-top: 20px;
-    background-color: #E1EEFF;
-    box-shadow: 0 0 4px #00095E;
-  }
-  
-  .about-item i {
-    font-size: 43px;
-    margin: 0;
-  }
-  
-  .about-item h3 {
-    font-size: 25px;
-    margin-bottom: 10px;
-  }
-  
-  .about-item hr {
-    width: 46px;
-    height: 3px;
-    background-color: #5fbff9;
-    margin: 0 auto;
-    border: none;
-    text-align: center;
-  }
-  
-  .about-item:hover i,
-  .about-item:hover h3 {
-    color: #00095E;
-    font-size: 30px;
-  }
-  
-  .about-item:hover hr {
-    background-color: #fff;
-  }
-  
-  .about-item:hover i {
-    transform: translateY(-20px);
-  }
-  
-  .about-item:hover i,
-  .about-item:hover h3,
-  .about-item:hover hr {
-    transition: all 300ms ease-in-out;
-  }
-  
-  .about-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
-  
-  .about-icon {
-    font-size: 32px;
-    color: #00095E;
-    margin-bottom: 10px;
-  }
-  
-  .about-icon:hover {
-    color: #FFC800;
-  }
-  
-  .about-heading {
-    padding-bottom: 10px;
-    border-bottom: 2px solid #00095E;
-  }
-  
-  .heading-box {
-    margin: 0 auto;
-    width: 75%;
-  }
-  
-  .icons-display {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    justify-content: center;
-  }
+  box-sizing: border-box;
+}
+
+.top-background-about-about {
+  width: 100%;
+  height: 440px;
+  background-image: url('https://www.tictactrip.eu/blog/wp-content/uploads/2021/05/road-trip-van-vert-et-groupe-damis-1160x652.jpg') !important;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-background-about-about p {
+  color: rgb(255, 255, 255);
+  font-size: xxx-large;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: bolder;
+}
+
+.about-item {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  background-color: #E1EEFF;
+  box-shadow: 0 0 4px #00095E;
+}
+
+.about-item i {
+  font-size: 43px;
+  margin: 0;
+}
+
+.about-item h3 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.about-item hr {
+  width: 46px;
+  height: 3px;
+  background-color: #5fbff9;
+  margin: 0 auto;
+  border: none;
+  text-align: center;
+}
+
+.about-item:hover i,
+.about-item:hover h3 {
+  color: #00095E;
+  font-size: 30px;
+}
+
+.about-item:hover hr {
+  background-color: #fff;
+}
+
+.about-item:hover i {
+  transform: translateY(-20px);
+}
+
+.about-item:hover i,
+.about-item:hover h3,
+.about-item:hover hr {
+  transition: all 300ms ease-in-out;
+}
+
+.about-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.about-icon {
+  font-size: 32px;
+  color: #00095E;
+  margin-bottom: 10px;
+}
+
+.about-icon:hover {
+  color: #FFC800;
+}
+
+.about-heading {
+  padding-bottom: 10px;
+  border-bottom: 2px solid #00095E;
+}
+
+.heading-box {
+  margin: 0 auto;
+  width: 75%;
+}
+
+.icons-display {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+}
+
+.row {
+  padding-bottom: 50px;
+}

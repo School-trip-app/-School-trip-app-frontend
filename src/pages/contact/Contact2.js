@@ -28,10 +28,10 @@ function Contact() {
               <h2 className="contact-title">Get in Touch</h2>
               <form onSubmit={onSubmit}>
                 <div className="col-lg-10 grid-child-element">
-                  <textarea className="" id="message" required placeholder='Enter Message' cols="30" rows="9" />
-                  <input className="" type="text" id="name" required placeholder='Enter your name' />
-                  <input className="" type="email" id="email" required placeholder='Enter email address' />
-                  <input className="" type="text" id="subject" required placeholder='Enter subject' />
+                  <textarea className="textarea-sh" id="message" required placeholder='Enter Message' cols="30" rows="9" />
+                  <input className="text-sh" type="text" id="name" required placeholder='Enter your name' />
+                  <input className="email-sh" type="email" id="email" required placeholder='Enter email address' />
+                  <input className="text-sh" type="text" id="subject" required placeholder='Enter subject' />
                 </div>
                 <button className="button sbtbutton" type="submit">
                   {formStatus}

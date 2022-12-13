@@ -1,3 +1,6 @@
+
+
+
 * {
   box-sizing: border-box;
 }
@@ -13,6 +16,9 @@
 .Signin-p {
   font-size: xx-large;
   text-indent: 30px;
+  color: rgb(0, 9, 94);
+
+
 }
 
 .SigninForm {
@@ -28,7 +34,7 @@
   border-right: none;
   width: 80%;
   align-self: center;
-  border-color: rgb(202, 86, 131);
+  border-color:  rgba(0, 9, 94, 0.664);
 }
 
 .formSubmit {
@@ -36,20 +42,8 @@
   padding: 10px;
   width: 80%;
   align-self: center;
-  border-color: rgb(202, 86, 131);
-  color: rgb(202, 86, 131);
-
-}
-
-.formSubmit:hover {
-  margin: 20px 0px;
-  padding: 10px;
-  width: 80%;
-  align-self: center;
-  border-color: rgb(29, 167, 187);
-  color: rgb(29, 167, 187);
-  background-color: rgba(240, 248, 255, 0.379);
-  transition: 2000ms;
+  border-color: rgba(0, 9, 94, 0.664);
+  color: rgba(0, 9, 94, 0.664);
 
 }
 
@@ -61,28 +55,33 @@
 }
 
 .typebut {
-  background-color: rgb(27, 44, 109);
-  color: white;
+  background-color: rgb(255, 200, 0);
+  color: rgb(27, 44, 109);
   padding: 15px;
-  margin: 5px;
   display: inline-block;
   cursor: pointer;
   width: 80%;
   text-align: center;
   border-radius: 5px;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.238);
+  border-bottom: 2px rgb(27, 44, 109) solid;
+  border-left: 2px rgb(27, 44, 109) solid;
+  margin: 10px;
+  font-weight: bold;
 }
 
 .typebut:hover {
-  background-color: rgb(255, 200, 0);
+  background: linear-gradient(135deg, #1a2d6d 0%, #0c1534 100%);
+  color: white;
   padding: 15px;
-  margin: 5px;
+  margin: 10px;
   display: inline-block;
   cursor: pointer;
   width: 80%;
   text-align: center;
   transition-duration: 1ms;
-  color: rgb(27, 44, 109);
+  border-bottom: 2px rgb(255, 255, 255) solid;
+  border-left: 2px rgb(255, 255, 255) solid;
 }
 
 .but-div {

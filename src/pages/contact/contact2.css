@@ -9,7 +9,7 @@
   margin-bottom: 20px;
 }
 
-textarea {
+.textarea-sh {
   font-family: inherit;
   width: 94%;
   height: 140px;
@@ -21,7 +21,7 @@ textarea {
   border-color: rgba(0, 0, 0, 0.153);
 }
 
-input[type=text] {
+.text-sh {
   width: 45%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -32,7 +32,7 @@ input[type=text] {
 
 }
 
-input[type=email] {
+.email-sh {
   width: 45%;
   padding: 12px 20px;
   margin: 8px 0;

@@ -143,14 +143,14 @@
     flex-direction: column;
 }
 
-.form-group{
+.form-group {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     margin: 10px 0;
 }
 
-.input{
+.input {
     width: 200px;
     height: 40px;
     border: 1px solid #000;
@@ -160,7 +160,7 @@
     outline: none;
 }
 
-.textarea{
+.textarea {
     width: 400px;
     height: 40px;
     border: 1px solid #000;
@@ -170,12 +170,32 @@
     outline: none;
 }
 
-input[type="file"] {
+.input-ib {
     display: none;
 }
+
 .custom-file-upload {
     display: inline-block;
     cursor: pointer;
     padding: 0px;
-    margin: 0px;
+    margin-top: 5px;
+}
+
+.top-background-about {
+    width: 100%;
+    height: 440px;
+    background-image: url('https://cdn.theculturetrip.com/wp-content/uploads/2017/07/hcti-078-lukebrookes_travelapps.jpg');
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.top-background-about p {
+    color: rgb(255, 255, 255);
+    font-size: xxx-large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: bolder;
 }

@@ -50,13 +50,13 @@
   font-weight: 700;
   line-height: 1.4;
   margin-bottom: 50px;
-
+  color: #00095E;
 }
 
 .trips-box {
   min-height: max-content;
   width: 85%;
-  padding: 0px 0px 100px;
+  padding: 0px 0px 0px;
   background-color: #ffffff;
   display: flex;
   flex-direction: row;
@@ -72,7 +72,6 @@
   align-items: center;
   justify-content: center;
   background-color: #ffffff;
-  padding-bottom: 200px;
 }
 
 .bot-video video {
@@ -82,7 +81,7 @@
 }
 
 .trip-card-holder {
-  min-width: 390px;
+  min-width: 400px;
   height: 400px;
   overflow: hidden;
   margin: 20px 5px;
@@ -93,10 +92,6 @@
 
 
 .trip-card-holder:hover {
-  min-width: 390px;
-  height: 400px;
-  margin: 20px 5px;
-  border-radius: 5px;
   box-shadow: 5px 5px 15px rgba(136, 136, 136, 0.653);
   transition-duration: 100ms;
 }
@@ -104,13 +99,12 @@
 
 
 .trip-card-image {
-  /* background-color: red; */
+
   width: 100%;
   height: 60%;
 }
 
 .trip-card-image :hover {
-  /* background-color: red; */
   z-index: 100;
 }
 
@@ -123,7 +117,6 @@
 
 
 .trip-card-data {
-  /* background-color: aquamarine; */
   width: 100%;
   height: 40%;
   display: flex;
@@ -132,7 +125,6 @@
 }
 
 .card-data-header {
-  /* background-color: #3e67d7; */
   width: 100%;
   height: 50%;
   display: flex;
@@ -164,7 +156,6 @@
 
 
 .card-data-middle {
-  /* background-color: #c5d73e; */
   width: 100%;
   height: 20%;
   display: flex;
@@ -183,7 +174,6 @@
 }
 
 .card-data-bottom {
-  /* background-color: #3ed757; */
   width: 100%;
   height: 30%;
   display: flex;
