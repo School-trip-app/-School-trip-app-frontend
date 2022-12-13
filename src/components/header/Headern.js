@@ -1,5 +1,5 @@
 import React from 'react'
-import './header.scss';
+import './header.css';
 import bgbus from '../../assets/h1_hero1.png.webp';
 import bus from '../../assets/car.png.webp';
 function Headern() {

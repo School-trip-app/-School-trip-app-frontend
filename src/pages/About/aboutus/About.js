@@ -1,6 +1,6 @@
 import React from 'react';
 import aboutUs from '../../../assets/about.png.webp';
-import './About.scss';
+import './About.css';
 function About() {
   return (
     <div className='aboutus-section section__padding'>

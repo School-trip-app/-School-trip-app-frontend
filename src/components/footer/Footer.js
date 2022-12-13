@@ -1,5 +1,5 @@
 import React from 'react'
-import './footer.scss';
+import './footer.css';
 import amman from '../../assets/amman-jordan-08bcc7bf3103.jpg';
 import dead from '../../assets/dead-sea-jordan.jpg';
 import istockphoto from '../../assets/istockphoto-1170941515-612x612.jpg';

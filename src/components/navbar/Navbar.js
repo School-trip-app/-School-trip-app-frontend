@@ -1,12 +1,12 @@
 import React from 'react'
-import './nav.scss';
+import './nav.css';
 import logo from '../../assets/logo.png.webp';
 import { Link } from 'react-router-dom';
 function Navbar() {
   return (
     <div className='navbar section__padding'>
       <div className='logo'>
-        <img alt='logo' src={logo} />
+        {/* <img alt='logo' src={logo} /> */}
       </div>
       <div className='nav-list'>
         <ul>

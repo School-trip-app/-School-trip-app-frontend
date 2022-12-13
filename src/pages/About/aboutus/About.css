@@ -1,12 +1,13 @@
-@import '../../../mixin/mixin.scss';
 
 .aboutus-section{
-    @include flex;
+    display:flex;   
     justify-content: space-evenly;
     align-items:center;
-    .aboutus-text{
+}
+.aboutus-section .aboutus-text{
         max-width:41.666667%;
-        h2{
+}
+.aboutus-section .aboutus-text  h2{
     color: #7EA0FF;
     font-size: 16px;
     font-weight: 400;
@@ -14,8 +15,8 @@
     text-transform: capitalize;
     display: inline-block;
     letter-spacing: 0.05em;
-        }
-        h1{
+}
+.aboutus-section .aboutus-text h1{
             font-size: 50px;
             display: block;
             font-weight: 700;
@@ -23,13 +24,13 @@
             margin-bottom: 22px;
             color:#00095E;
         }
-        p{
+.aboutus-section .aboutus-text p{
             font-size: 18px;
             font-weight: 400;
             line-height: 1.8;
             color:var(--color-gray);
         }
-        button{
+.aboutus-section .aboutus-text button{
             margin-top:150px;
             background: #FFC800;
             font-family: "Roboto",sans-serif;
@@ -44,15 +45,12 @@
             line-height: 1;
             line-height: 0;
             cursor: pointer;
-            -moz-user-select: none;
             transition: color 0.4s linear;
             position: relative;
             z-index: 1;
             border: 0;
             overflow: hidden;
-        }
-    }
-    .about-image img{
+}
+.about-image img{
         width:700px;
     }
-}
