@@ -14,6 +14,7 @@ import "./about.css";
 function About() {
   return (
     <>
+    <Navbar/>
       <div >
         <section className='top-background-about-about'>
           <p>About Us</p>
@@ -140,6 +141,7 @@ function About() {
           </div>
         </section>
       </div >
+      <Footer/>
     </>
   );
 

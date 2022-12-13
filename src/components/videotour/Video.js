@@ -1,6 +1,6 @@
 import React from 'react'
 import video from '../../assets/oekotourismus-cc0-pixabay-nikolaus_bader-200820.avif';
-import './video.scss'
+import './video.css'
 function Video() {
   return (
     <div className='video'>

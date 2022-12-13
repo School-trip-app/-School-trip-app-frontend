@@ -2,11 +2,12 @@ import React from 'react';
 import './blog.css';
 import { AiFillLike, AiFillDislike } from 'react-icons/ai';
 import { Spinner } from '@chakra-ui/react'
-import { useState, state } from 'react';
+import { useState } from 'react';
 import { AiOutlineSend } from 'react-icons/ai';
 import { BiImageAdd } from 'react-icons/bi';
 import { useToast } from '@chakra-ui/react'
-
+import Navbar from '../../components/navbar/Navbar';
+import Footer from '../../components/footer/Footer';
 function Memory() {
 
     const toast = useToast()
@@ -41,6 +42,7 @@ function Memory() {
     }
     return (
         <>
+        <Navbar/>
             <div>
                 <div >
                     <section className='top-background-about'>
@@ -57,8 +59,8 @@ function Memory() {
                     <h1 className='titlepostform'>Add your Memory</h1>
                     <form >
                         <div className='form-group'>
-                            <input className='input' type='text' maxlength="40" placeholder='Title' />
-                            <textarea className='textarea' type='text' maxlength="250" placeholder='Description' />
+                            <input className='input' type='text' maxLength="40" placeholder='Title' />
+                            <textarea className='textarea' type='text' maxLength="250" placeholder='Description' />
                             <label for="file-upload" className="custom-file-upload">
                                 <i className="fa fa-cloud-upload"></i> <BiImageAdd style={{ color: 'rgb(126, 160, 255)', fontSize: '30px' }} />
                             </label>
@@ -71,7 +73,7 @@ function Memory() {
                 </div>
                 <div className='post'>
                     <div className='post1'>
-                        <img className='imgpost' src="https://mdbootstrap.com/img/new/standard/nature/023.jpg" />
+                        <img className='imgpost' src="https://mdbootstrap.com/img/new/standard/nature/023.jpg" alt='img'/>
                     </div>
                     <div className='post2'>
                         <h1 className='titlepost'>Image title</h1>
@@ -93,7 +95,7 @@ function Memory() {
 
                 <div className='post'>
                     <div className='post1'>
-                        <img className='imgpost' src="https://mdbootstrap.com/img/new/standard/nature/023.jpg" />
+                        <img className='imgpost' src="https://mdbootstrap.com/img/new/standard/nature/023.jpg" alt='img'/>
                     </div>
                     <div className='post2'>
                         <h1 className='titlepost'>Image title</h1>
@@ -115,7 +117,7 @@ function Memory() {
 
                 <div className='post'>
                     <div className='post1'>
-                        <img className='imgpost' src="https://mdbootstrap.com/img/new/standard/nature/023.jpg" />
+                        <img className='imgpost' src="https://mdbootstrap.com/img/new/standard/nature/023.jpg" alt='img'/>
                     </div>
                     <div className='post2'>
                         <h1 className='titlepost'>Image title</h1>
@@ -135,6 +137,7 @@ function Memory() {
                     </div>
                 </div>
             </div>
+            <Footer/>
         </>
     )
 }

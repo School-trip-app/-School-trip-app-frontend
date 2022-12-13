@@ -2,7 +2,18 @@ import React from 'react'
 import './nav.scss';
 import logo from '../../assets/Logo.jpeg';
 import { Link } from 'react-router-dom';
+import { setLogout } from '../../store/auth';
+import { useDispatch } from 'react-redux';
+import cookies from 'react-cookies';
 function Navbar() {
+  const dispatch = useDispatch();
+  const handlerLogout=()=>{
+    cookies.remove('token');
+    cookies.remove('username');
+    cookies.remove('userRole');
+    cookies.remove('capabilities')
+    dispatch(setLogout());
+  }
   return (
     <div className='navbar section__padding'>
       <div className='logo'>
@@ -16,9 +27,8 @@ function Navbar() {
           <Link to='/about'><li>About</li></Link>
           <Link to='/contact'><li>Contact</li></Link>
           {/* adding number */}
-          <li className='call'>
-            +962 (77) 998 8776
-          </li>
+          <li className='call' onClick={handlerLogout}>
+          Logout          </li>
         </ul>
       </div>
     </div>

@@ -1,7 +1,8 @@
 import React, {useState } from 'react'
 import './contact2.css'
 import { FaHome, FaEnvelope, FaPhoneSquareAlt } from "react-icons/fa";
-
+import Navbar from '../../components/navbar/Navbar';
+import Footer from '../../components/footer/Footer';
 
 const onSubmit = (e) => {
   e.preventDefault()
@@ -18,6 +19,7 @@ function Contact() {
   const [formStatus, setFormStatus] = useState('Send');
   return (
     <>
+    <Navbar/>
       <section className='top-background'>
         <p>Contact</p>
       </section>
@@ -64,6 +66,7 @@ function Contact() {
           </section>
         </div>
       </div>
+      <Footer/>
     </>
   )
 }

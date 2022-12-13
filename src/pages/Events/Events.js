@@ -2,9 +2,12 @@ import React from 'react';
 import Card from '../../pages/Events/card/Card';
 import Video from '../../components/videotour/Video'
 import './trip.css';
-
+import Navbar from '../../components/navbar/Navbar';
+import Footer from '../../components/footer/Footer';
 function Trips() {
   return (
+    <>
+    <Navbar/>
     <div className='trips-page'>
       <section className='top-background'>
         <p>All Trips</p>
@@ -24,12 +27,11 @@ function Trips() {
         </div>
       </section>
       <Video/>
-      {/* <section className='bot-video'>
-        <video width="640" height="400" controls autoplay>
-          <source src="https://www.youtube.com/watch?v=qtjcN1nnln4" type="mp4" />
-        </video>
-      </section> */}
+ 
     </div>
+    <Footer/>
+    </>
+
   )
 }
 

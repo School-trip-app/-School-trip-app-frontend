@@ -1,5 +1,5 @@
 import React from 'react'
-import './footer.scss';
+import './footer.css';
 import logo from '../../assets/logo.png';
 import { FaGithub, FaWhatsapp, FaInstagram, FaFacebookF } from 'react-icons/fa';
 function footer() {
@@ -7,17 +7,17 @@ function footer() {
     <div className='footer'>
       <div className='footer-top'>
         <div className='footer-top-1d'>
-          <img src={logo} rel='logo' />
+          <img src={logo} rel='logo' alt='logo'/>
           <p>The first webApp in Jordan to organize school trips.
             safe, useful and fun trips to any place around the kingdom,
             for more info contact us via social channels, response will be during the working
             time of our orgnization.
           </p>
           <div className='footer-top-1d-icon'>
-            <a><FaInstagram /></a>
-            <a><FaWhatsapp /></a>
-            <a><FaFacebookF /></a>
-            <a ><FaGithub /></a>
+            <a href='£'><FaInstagram /></a>
+            <a href='£'><FaWhatsapp /></a>
+            <a href='£'><FaFacebookF /></a>
+            <a href='£'><FaGithub /></a>
           </div>
         </div>
         <div className='footer-top-2d'>

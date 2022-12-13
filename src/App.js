@@ -4,14 +4,18 @@ import Headern from './components/header/Headern';
 import Travel from './components/travel/Travel';
 import Video from './components/videotour/Video';
 import JoPics from './components/jorPics/JoPics';
+import Navbar from './components/navbar/Navbar';
+import Footer from './components/footer/Footer';
 function App() {
   return (
     <div >
+      <Navbar />
       <Headern />
       <Travel />
       <About />
       <Video />
       <JoPics />
+      <Footer/>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
@@ -10,21 +10,25 @@ import Contact from './pages/contact/Contact2';
 import Blog from './pages/Blog/Blog';
 import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
-import Register from  './components/register/Register';
+import Register from './components/register/Register';
+import { Provider } from 'react-redux';
+import store from './store/store';
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
-  <Router>
-      <Navbar/>
-    <Routes>
-      <Route element={<App />} path="/" />
-      <Route element={<Events />} path='/events' />
-      <Route element={<Blog />} path='/blog' />
-      <Route element={<About />} path='/about' />
-      <Route element={<Contact />} path='/contact' />
-      <Route element={<Register/>} path='/register'/>
-    </Routes>
-    <Footer/>
-  </Router>
+  <Provider store={store}>
+    <Router>
+      <Routes>
+        <Route element={<App />} path="/home" />
+        <Route element={<Events />} path='/events' />
+        <Route element={<About />} path='/about' />
+        <Route element={<Blog />} path='/blog' />
+        <Route element={<Contact />} path='/contact' />
+        <Route element={<Register />} path='/' />
+      </Routes>
+    </Router>
+  </Provider >
+
 );
 
 // If you want to start measuring performance in your app, pass a function
