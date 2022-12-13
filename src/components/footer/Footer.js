@@ -1,48 +1,57 @@
 import React from 'react'
 import './footer.scss';
-import amman from '../../assets/amman-jordan-08bcc7bf3103.jpg';
-import dead from '../../assets/dead-sea-jordan.jpg';
-import istockphoto from '../../assets/istockphoto-1170941515-612x612.jpg';
-import Umm from '../../assets/Umm-Qais.jpg';
-import Ajloun_Castle from '../../assets/Ajloun_Castle.jpg';
-import logo from '../../assets/logo.png.webp';
+import logo from '../../assets/logo.png';
+import { FaGithub, FaWhatsapp, FaInstagram, FaFacebookF } from 'react-icons/fa';
 function footer() {
   return (
     <div className='footer'>
-      <div className='images-travels'>
-        <img src={amman} alt='travel' />
-        <img src={dead} alt='travel' />
-        <img src={istockphoto} alt='travel' />
-        <img src={Umm} alt='travel' />
-        <img src={Ajloun_Castle} alt='travel' />
+      <div className='footer-top'>
+        <div className='footer-top-1d'>
+          <img src={logo} rel='logo' />
+          <p>The first webApp in Jordan to organize school trips.
+            safe, useful and fun trips to any place around the kingdom,
+            for more info contact us via social channels, response will be during the working
+            time of our orgnization.
+          </p>
+          <div className='footer-top-1d-icon'>
+            <a><FaInstagram /></a>
+            <a><FaWhatsapp /></a>
+            <a><FaFacebookF /></a>
+            <a ><FaGithub /></a>
+          </div>
+        </div>
+        <div className='footer-top-2d'>
+          <div className='footer-slice'>
+            <h4>Navigation</h4>
+            <p>Home</p>
+            <p>About</p>
+            <p>Serveces</p>
+            <p>Blog</p>
+          </div>
+        </div>
+        <div className='footer-top-3d'>
+          <div className='footer-slice'>
+            <h4>Services</h4>
+            <p>Blckforest</p>
+            <p>Rongdhonu</p>
+            <p>Meghrong</p>
+          </div>
+        </div>
+        <div className='footer-top-4d'>
+          <div className='footer-slice'>
+            <h4>Contact Us</h4>
+            <p>Amman-Jordan</p>
+            <p>demomail89@gmail.com</p>
+            <p className='phone'>+962(77) 998-8665</p>
+          </div>
+        </div>
       </div>
-      <div className='footer-section section__padding'>
-        <div className='footer-slice'>
-          <img alt='logo' src={logo} />
-          <p style={{ width: '300px' }}>Land behold it created good saw after she'd Our set living. Signs midst dominion creepeth morning laboris nisi ufsit aliquip.</p>
-        </div>
-        <div className='footer-slice'>
-          <h4>Navigation</h4>
-          <p>Home</p>
-          <p>About</p>
-          <p>Serveces</p>
-          <p>Blog</p>
-          <p>Contact</p>
-        </div>
-        <div className='footer-slice'>
-          <h4>Services</h4>
-          <p>Blckforest</p>
-          <p>Rongdhonu</p>
-          <p>Meghrong</p>
-        </div>
-        <div className='footer-slice'>
-          <h4>Contact Us</h4>
-          <p>76/A, Green Lane, Dhanmondi, NYC</p>
-          <p>demomail89@gmail.com</p>
-          <p className='phone'>+10(78) 738-9083</p>
-        </div>
+      <div className='footer-middle'>
+        <p>Copyright ©2022 All rights reserved</p>
       </div>
-      <p className='copy'>Copyright ©2022 All rights reserved | This website is made with  by <span>Journey Team</span></p>
+      <div className='footer-bot'>
+        <p className='copy'> This webApp is made with 🤍 by <span>JOurney Team</span></p>
+      </div>
     </div>
   )
 }

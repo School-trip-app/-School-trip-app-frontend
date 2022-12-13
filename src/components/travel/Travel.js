@@ -60,37 +60,11 @@ function Travel() {
         <h1>Upcoming Events</h1>
       </div>
       <Slider {...settings}>
-        {/* {dataDigitalBestSeller.map((item) => (
-          <div className="card">
-            <div className="card-top">
-              <img
-                src={
-                  defaultImage[item.title] === item.title
-                    ? defaultImage.linkDefault
-                    : item.linkImg
-                }
-                alt={item.title}
-                onError={handleErrorImage}
-              />
-            </div>
-            <div className="card-bottom">
-              <div className='card-text'>
-                <h1>{item.title}</h1>
-                <h1 className='price'>{item.price}</h1>
-              </div>
-              <div className='card-date'>
-                <h3 className='month'>12 Jan - 18 Jan</h3>
-                <h3 className='days'>5 Days</h3>
-              </div>
-            </div>
-          </div>
-        ))} */}
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        {/* create component insade of spagiti code */}
+        <Card packageName='Package El-Habaieb' price='15' date='20-jun-2030' time='10:30am - 5:00pm' image='https://burst.shopifycdn.com/photos/person-holds-a-book-over-a-stack-and-turns-the-page.jpg?width=1200&format=pjpg&exif=0&iptc=0' city='amman' />
+        <Card packageName='Package El-Habaieb' price='15' date='20-jun-2030' time='10:30am - 5:00pm' image='https://burst.shopifycdn.com/photos/person-holds-a-book-over-a-stack-and-turns-the-page.jpg?width=1200&format=pjpg&exif=0&iptc=0' city='amman' />
+        <Card packageName='Package El-Habaieb' price='15' date='20-jun-2030' time='10:30am - 5:00pm' image='https://burst.shopifycdn.com/photos/person-holds-a-book-over-a-stack-and-turns-the-page.jpg?width=1200&format=pjpg&exif=0&iptc=0' city='amman' />
+        <Card packageName='Package El-Habaieb' price='15' date='20-jun-2030' time='10:30am - 5:00pm' image='https://burst.shopifycdn.com/photos/person-holds-a-book-over-a-stack-and-turns-the-page.jpg?width=1200&format=pjpg&exif=0&iptc=0' city='amman' />
       </Slider>
     </div>
   )

@@ -3,15 +3,18 @@ import aboutUs from '../../../assets/about.png.webp';
 import './About.scss';
 function About() {
   return (
-    <div className='aboutus-section section__padding'>
+    <div className='aboutus-section section__padding' style={{ marginTop: '80px' }}>
       <div className='about-image'>
-        <img src={aboutUs} alt='abouus'/>
+        <img src={aboutUs} alt='about_us' />
       </div>
       <div className='aboutus-text'>
-        <h2>About Us</h2>
+        <h2>Why JOurney</h2>
         <h1>Get ready for real time adventure</h1>
-        <p>Let’s start your journey with us, your dream will come true. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation.</p>
-        <button>Book Your Destination</button>
+        <p>We provide school trip packages that are characterized by safety and interest in students in terms of education and entertainment, and with a thoughtful choice of places and activities, at prices that suit all groups.</p>
+        <p>✦ Safe </p>
+        <p>✦ Enjoyable </p>
+        <p>✦ Useful </p>
+        <button>Book Your Trip</button>
       </div>
     </div>
   )

@@ -1,0 +1,16 @@
+.images-travels {
+  display: flex;
+  width: 100%;
+}
+
+.images-travels img {
+  width: 303.8px;
+  position: relative;
+}
+
+.images-travels img :hover {
+  width: 103.8px;
+  position: relative;
+  outline: 5px blanchedalmond solid;
+
+}

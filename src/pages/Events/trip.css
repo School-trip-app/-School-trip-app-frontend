@@ -214,6 +214,7 @@
 
 .card-data-bottom-p {
   width: 40%;
+  padding-right: 7px;
   font-size: large;
   margin-bottom: 15px;
   overflow: hidden;
