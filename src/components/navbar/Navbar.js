@@ -1,24 +1,26 @@
 import React from 'react'
 import './nav.scss';
-import logo from '../../assets/logo.png.webp';
+import logo from '../../assets/Logo.jpeg';
+import { Link } from 'react-router-dom';
 function Navbar() {
   return (
     <div className='navbar section__padding'>
-       <div className='logo'>
-          <img alt='logo' src={logo}/>
-       </div>
-       <div className='nav-list'>
-           <ul>
-             <li>Home</li>
-             <li>Events</li>
-             <li>About</li>
-             <li>Blog</li>
-             <li>Contact</li>
-             <li className='call'>
-               +10 (67) 678 2567
-             </li>
-           </ul>
-       </div>
+      <div className='logo'>
+        <img alt='logo' src={logo} className='logo-image-pic' />
+      </div>
+      <div className='nav-list'>
+        <ul>
+          <Link to='/'><li>Home</li></Link>
+          <Link to='/events'><li>Events</li></Link>
+          <Link to='/about'><li>About</li></Link>
+          <Link to='/blog'><li>Blog</li></Link>
+          <Link to='/contact'><li>Contact</li></Link>
+          {/* adding number */}
+          <li className='call'>
+            +962 (77) 998 8776
+          </li>
+        </ul>
+      </div>
     </div>
   )
 }

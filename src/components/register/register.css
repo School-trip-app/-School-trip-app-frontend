@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+}
+
+.register {
+  min-height: 745px;
+  background: linear-gradient(90deg, rgb(250, 250, 250) 0%, rgba(81, 121, 9, 0.6589986336331408) 21%, rgba(0, 212, 255, 1) 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: rgb(0, 0, 0);
+}
+
+.registerCard {
+  width: 60%;
+  min-height: 600px;
+  /* background-color: rgba(255, 255, 255, 0.752); */
+  border-radius: 20px;
+  /* padding: 20px; */
+  box-shadow: 5px 5px 50px rgb(185, 201, 206);
+  display: flex;
+}
+
+.registerHero {
+  width: 60%;
+  /* background-image: url(https://covid19.gov.im/media/2121/landing-page-graphic-travel.png); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-flow: column wrap;
+  border-radius: 20px 0px 0px 20px;
+}
+
+.heroTop {
+  /* background-color: rgb(76, 162, 236); */
+  height: 20%;
+  border-top-left-radius: 20px;
+  padding: 40px 0px 0px 20px;
+}
+
+#logo {
+  font-size: xx-large;
+  text-indent: 30px;
+}
+
+.heroMid {
+  /* background-color: rgb(40, 108, 167); */
+  height: 50%;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  font-size: larger;
+}
+
+.heroBot {
+  /* background-color: rgb(16, 88, 151); */
+  height: 30%;
+  border-bottom-left-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.registerForm {
+  width: 40%;
+  background-color: rgb(255, 255, 255);
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+#siteName {
+  color: rgb(255, 255, 255);
+  text-indent: 220px;
+}
+
+.logo-JO {
+  color: rgb(23, 122, 23);
+}
+
+.logo-urney {
+  color: rgb(87, 54, 6);
+}
+
+.Signup-button {
+  cursor: pointer;
+}
+
+.formSubmit {
+  cursor: pointer;
+}
+
