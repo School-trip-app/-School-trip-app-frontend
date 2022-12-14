@@ -1,46 +1,70 @@
 @import '../../mixin/mixin.scss';
-.navbar{
+
+.navbar {
     @include display-flex;
-    .nav-list{
-        ul{
+    //adding header sytle 
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0px;
+    z-index: 1000;
+    background-color: white;
+    transition-delay: 1000ms;
+    border-bottom: 1px solid #3f3fa02b;
+    //adding header sytle 
+    .nav-list {
+        ul {
             @include display-flex;
             align-items: center;
-            li{
+            margin-bottom: 0 !important;
+
+            li {
                 position: relative;
-                margin-left:30px;
-                font-family: "Josefin Sans",sans-serif;
-                color:var(--color-tag);
+                margin-left: 30px;
+                font-family: "Josefin Sans", sans-serif;
+                color: var(--color-tag);
                 font-weight: 500;
-                font-size:16px;
+                font-size: 16px;
                 transition: all .3s ease-out 0s;
-                cursor:pointer;
-                &:hover::after{
-                    width:100%;
+                cursor: pointer;
+
+                &:hover::after {
+                    width: 100%;
                 }
-                &:hover{
-                    color:var(--color-blue);
+
+                &:hover {
+                    color: var(--color-blue);
                 }
-                &::after{
-                 content: "";
-                 position: absolute;
-                 width: 0;
-                 bottom: -5px;
-                 left: -1px;
-                 height: 2px;
-                 z-index: 1;
-                 transition: all .4s ease-out 0s;
-                 background: #7EA0FF;
-                background-color:var(--color-blue);
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 0;
+                    bottom: -5px;
+                    left: -1px;
+                    height: 2px;
+                    z-index: 1;
+                    transition: all .4s ease-out 0s;
+                    background: #7EA0FF;
+                    background-color: var(--color-blue);
                 }
             }
-            .call{
-              color:var(--color-white);
-              background:var(--color-yellow);
-              padding:13px 30px;
-              border-radius:5px;
+
+            .call {
+                color: var(--color-white);
+                background: var(--color-yellow);
+                padding: 13px 30px;
+                border-radius: 5px;
             }
-            
+
         }
     }
 
+}
+
+// adding logo style
+.logo-image-pic {
+    width: 40%;
+    height: 40%;
+    // margin-bottom: 20px;
 }

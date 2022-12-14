@@ -1,0 +1,121 @@
+@import '../../mixin/mixin.scss';
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap');
+
+.contact-title {
+  color: #00095e;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 27px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+textarea {
+  font-family: inherit;
+  width: 94%;
+  height: 140px;
+  padding: 22px 20px;
+  resize: none;
+  outline: none;
+  background: transparent;
+  border: 1px black solid;
+  border-color: rgba(0, 0, 0, 0.153);
+}
+
+input[type=text] {
+  width: 45%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  margin-right: 30px;
+  outline: none;
+  border: 1px black solid;
+  border-color: rgba(0, 0, 0, 0.153);
+
+}
+
+input[type=email] {
+  width: 45%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  outline: none;
+  border: 1px black solid;
+  border-color: rgba(0, 0, 0, 0.153);
+}
+
+.contact-info {
+  margin-bottom: 25 px;
+
+}
+
+.contact-info__icon {
+  margin-right: 20px;
+}
+
+.media {
+  display: flex;
+  align-items: flex-start;
+}
+
+.button {
+  font-family: "Josefin Sans", sans-serif;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 18px 44px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 8px 0px;
+  cursor: pointer;
+}
+
+.sbtbutton {
+  background-color: white;
+  color: black;
+  border: 2px solid #e7e7e7;
+}
+
+.contact-section {
+  display: flex;
+  width: 100%;
+  flex-flow: row nowrap;
+  margin: 100px 0px;
+}
+
+.form-div {
+  width: 70%;
+  color: rgb(0, 9, 94);
+}
+
+.icon-div {
+  width: 30%;
+  padding-top: 50px;
+  color: rgb(0, 9, 94);
+}
+
+.icon {
+  font-size: xx-large;
+}
+
+.icon-title {
+  display: flex;
+}
+
+.icon-title h5 {
+  margin: 3px 0px 0px 15px;
+}
+
+.icon-type {
+  margin: 0px 0px 30px 0px;
+}
+
+.top-background {
+  width: 100%;
+  height: 440px;
+  background-image: url('https://preview.colorlib.com/theme/tralive/assets/img/hero/h1_hero2.jpg.webp');
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
