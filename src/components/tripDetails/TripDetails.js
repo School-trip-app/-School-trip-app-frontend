@@ -1,15 +1,19 @@
 import React from 'react';
 import './tripDetails.css';
-import { FaDirections, FaRegCalendarAlt, FaRegClock, FaDollarSign, FaMapMarkerAlt, FaStar, FaUsers, FaConciergeBell } from 'react-icons/fa'
+import { FaDirections, FaRegCalendarAlt, FaRegClock, FaDollarSign, FaMapMarkerAlt, FaStar, FaUsers, FaConciergeBell } from 'react-icons/fa';
+
+
 
 
 
 function TripDetails({ title, city, description, date, price, rate, startTime, endTime, pickup, drop, images, people, meals }) {
 
+
+
   return (
     <div className='TripDetails'>
       <div className='TripDetails-head'>
-        <img src='https://images.unsplash.com/photo-1670968982569-81f78c8e841d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1192&q=80' alt='IMAGE' />
+        <img src='https://images.ctfassets.net/kdawwlsweh27/2LtummpjO849eQ83yGGiUN/316e62a71020a924f9f663b6ca6b7eda/Fresh_Stock_Content.jpg' alt='sdasdasd'/>
       </div>
       <div className='TripDetails-body'>
         <h2>{title}</h2>
@@ -46,7 +50,7 @@ function TripDetails({ title, city, description, date, price, rate, startTime, e
             <FaRegClock />
             <p className='title'>Starting & Ending time</p>
           </div>
-          <p>{startTime}-{endTime}</p>
+          <p>{startTime} - {endTime}</p>
           <div className='TripDetails-body-part2-wicon'>
             <FaMapMarkerAlt />
             <p className='title'>Pick & Drop points</p>
@@ -58,7 +62,7 @@ function TripDetails({ title, city, description, date, price, rate, startTime, e
           </div>
           <p>{rate}</p>
         </div>
-        <button>Book</button>
+        <button>Book Now</button>
       </div>
     </div>
   )
