@@ -18,7 +18,7 @@ function Contact() {
   const [formStatus, setFormStatus] = useState('Send');
   return (
     <>
-      <section className='top-background'>
+      <section className='top-background-contact'>
         <p>Contact</p>
       </section>
       <div className="container mt-5">

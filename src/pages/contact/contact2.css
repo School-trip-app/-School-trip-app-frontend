@@ -109,13 +109,22 @@
   margin: 0px 0px 30px 0px;
 }
 
-.top-background {
+.top-background-contact {
   width: 100%;
   height: 440px;
-  background-image: url('https://preview.colorlib.com/theme/tralive/assets/img/hero/h1_hero2.jpg.webp');
+  background-image: url('https://images.unsplash.com/photo-1456428746267-a1756408f782?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
   background-size: cover;
   background-position: center center;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.top-background-contact p {
+  color: rgb(255, 255, 255);
+  font-size: xxx-large;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: bolder;
+  text-shadow: 3px 3px 3px rgb(0, 0, 0);
 }
