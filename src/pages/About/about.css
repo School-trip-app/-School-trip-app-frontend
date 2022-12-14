@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+.about {
+  margin-top: -47px;
+}
+
 .top-background-about-about {
   width: 100%;
   height: 440px;

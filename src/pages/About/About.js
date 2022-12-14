@@ -10,6 +10,7 @@ import suhaib from "./abt-img/SuhiabAlnji.jpg";
 import Wlla from "./abt-img/walla.jpg";
 import Footer from '../../components/footer/Footer'
 import "./about.css";
+import AboutSlider from "../../components/aboutSlider/AboutSlider";
 
 function About() {
   return (
@@ -22,13 +23,12 @@ function About() {
       <div className="about" >
         <section class="bg-light mt-5" id="ABOUT">
           <div id="about-1">
-            <div className="content-box-lg">
+            <div className="content-box-lg" style={{ backgroundColor: 'white' }}>
               <div className="container">
                 <div class="col-sm-12 col-md-12 mb-4">
-                  <h3 class="text-center mt-4 text-secondary" style={{ 'padding': '50px' }}>Our Team</h3>
+                  <h3 class="text-center mt-4 text-secondary" style={{ 'padding': '50px' }}>Team Members</h3>
                 </div>
-                <div className="row" style={{ 'display': 'grid', 'marginLeft': 'auto', 'marginRight': 'auto' },
-                  { 'justify-content': 'center' }}>
+                <div className="row" style={{ 'display': 'grid', 'marginLeft': 'auto', 'marginRight': 'auto' }, { 'justify-content': 'center' }}>
                   <div className="col-md-3" style={{ 'margin': '50px 25px' }}>
                     <div className="text-center" >
                       <img src={suhaib} class="w-100 rounded-circle" alt="Suhaib" />
@@ -51,7 +51,7 @@ function About() {
                     </div>
                   </div>
 
-                  <div className="col-md-3"  style={{ 'margin': '50px 25px' }}>
+                  <div className="col-md-3" style={{ 'margin': '50px 25px' }}>
                     <div className="text-center">
                       <img src={mhmd} className="w-100 rounded-circle" alt="mhmd" />
                       <h4 className="pt-3" style={{ 'color': ' #00095E' }}>Moh'd Al-Haimouni</h4 >
@@ -139,6 +139,7 @@ function About() {
             </div>
           </div>
         </section>
+        <AboutSlider />
       </div >
     </>
   );

@@ -1,0 +1,27 @@
+.AboutSlider {
+  width: 100%;
+  min-height: 440px;
+  background-image: url('../../assets/section_bg1.jpg.webp');
+  background-size: cover;
+  background-position: 0px 30px;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding: 90px 300px 0px 300px;
+}
+
+.AboutSlider h3 {
+  font-size: 50px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 40px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.AboutSlider p {
+  line-height: 1.5;
+  margin-bottom: 32px;
+  font-size: 26px;
+  color: #fff;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+}
