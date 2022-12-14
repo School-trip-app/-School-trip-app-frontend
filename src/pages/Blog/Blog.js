@@ -8,7 +8,11 @@ import { BiImageAdd } from 'react-icons/bi';
 import { useToast } from '@chakra-ui/react'
 import Navbar from '../../components/navbar/Navbar';
 import Footer from '../../components/footer/Footer';
+import { useSelector } from 'react-redux';
+import { stateAuth } from '../../store/auth';
+import Register from '../../components/register/Register';
 function Memory() {
+    const state=useSelector(stateAuth);
 
     const toast = useToast()
 
@@ -42,6 +46,7 @@ function Memory() {
     }
     return (
         <>
+        {state.isLogin&&<>
         <Navbar/>
             <div>
                 <div >
@@ -138,6 +143,9 @@ function Memory() {
                 </div>
             </div>
             <Footer/>
+        </>}
+        {!state.isLogin&&<Register/>}
+
         </>
     )
 }

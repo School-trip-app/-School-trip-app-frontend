@@ -10,10 +10,14 @@ import suhaib from "./abt-img/SuhiabAlnji.jpg";
 import Wlla from "./abt-img/walla.jpg";
 import Footer from '../../components/footer/Footer'
 import "./about.css";
-
+import { useSelector } from 'react-redux';
+import { stateAuth } from '../../store/auth';
+import Register from "../../components/register/Register";
 function About() {
+  const state=useSelector(stateAuth);
   return (
     <>
+    {state.isLogin&&<>
     <Navbar/>
       <div >
         <section className='top-background-about-about'>
@@ -142,6 +146,8 @@ function About() {
         </section>
       </div >
       <Footer/>
+    </>}
+    {!state.isLogin&&<Register/>}
     </>
   );
 

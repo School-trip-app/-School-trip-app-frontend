@@ -4,8 +4,15 @@ import Video from '../../components/videotour/Video'
 import './trip.css';
 import Navbar from '../../components/navbar/Navbar';
 import Footer from '../../components/footer/Footer';
+import { useSelector } from 'react-redux';
+import { stateAuth } from '../../store/auth';
+import Register from '../../components/register/Register';
 function Trips() {
+  const state=useSelector(stateAuth);
+
   return (
+    <>
+    {state.isLogin&&
     <>
     <Navbar/>
     <div className='trips-page'>
@@ -27,9 +34,10 @@ function Trips() {
         </div>
       </section>
       <Video/>
- 
     </div>
     <Footer/>
+    </>}
+    {!state.isLogin&&<Register/>}
     </>
 
   )

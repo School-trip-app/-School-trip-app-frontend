@@ -1,36 +1,45 @@
 import React,{useState} from 'react';
-// import FileBase from 'react-file-base64';
-
+import axios from 'axios';
+import cookies from 'react-cookies';
+import { useDispatch } from 'react-redux';
+import { setLogin} from '../../store/auth';
 
 function SchoolForm() {
-  const [userInfo, setuserInfo] = useState({
-    file:[],
-    filepreview:null,
-   });
-
-  const handlerSubmit = (e) => {
+  const dispatch = useDispatch();
+  const [postData, setPostData] = useState({
+    creater: '',
+    title: '',
+    message: '',
+    tags: '',
+    selectedFile: ''
+})
+  const handlerFile=(e)=>{
+    let file = e.target.files[0];
+    console.log(file)
+    setPostData({...postData,selectedFile:file});
+    console.log(postData.selectedFile)
+  }
+  const handlerSubmit = async(e) => {
     e.preventDefault();
-    setuserInfo({
-      ...userInfo,
-      file:e.target.files[0],
-      filepreview:window.URL.createObjectURL(e.target.files[0]),
-    });
-    const formdata = new FormData(); 
-    formdata.append('avatar', userInfo.file);
+  
+    let formData = new FormData();
+    formData.append('username', e.target.username.value);
+    formData.append('email',e.target.email.value )
+    formData.append('password',e.target.password.value)
+    formData.append('userRole','school')
+    formData.append('phonenumber',e.target.phone.value)
+    formData.append('gender','male')
+    formData.append('image', postData.selectedFile);
+    console.log(formData);
 
-    // const file = e.target.files[0];
-    // let formData = new FormData();
-    // formData.append('file', file);
-    const user = {
-      username: e.target.username.value,
-      email: e.target.email.value,
-      password: e.target.password.value,
-      userRole: 'school',
-      phonenumber: e.target.phone.value,
-      gender: 'gender',
-      image:formdata
-    }
-    console.log(user);
+    await axios.post(`http://localhost:4001/user`,formData).then((res) => {
+      cookies.save('capabilities', res.data.capabilities);
+      cookies.save('token', res.data.token);
+      cookies.save('userRole', res.data.userRole);
+      cookies.save('username', res.data.username);
+      console.log(res.data)
+      dispatch(setLogin());
+    }).catch((err) => console.log(err || err));
   }
 
   return (
@@ -39,16 +48,15 @@ function SchoolForm() {
       <input type='email' id='email' name='email' placeholder='E-mail' className='formInput' required ></input>
       <input type='text' name='phone' id='phone' placeholder='phone number' className='formInput' required />
       <input type='password' id='password' name='password' placeholder='Password' className='formInput' required ></input>
-      <input type='file' id='files' />
-      {/* <FileBase
-        type='file'
-        multiple={false}
-        onDone={({ base64 }) => setPostData({ ...postData, selectedFile: base64 })}
-      /> */}
-      {/* <input type='file' width='400' className='formInput' accept="image/*" /> */}
+      <input type='file' id='files' name='file' onChange={(e)=>handlerFile(e)}/>
       <input type='submit' name='sub' value='CONTINUE' className='formSubmit' id='sub'></input>
     </form>
   )
 }
 
 export default SchoolForm
+
+
+
+
+

@@ -18,7 +18,7 @@ function StudentForm() {
       phonenumber: e.target.phone.value,
       gender: e.target.gender.value,
     }
-    await axios.post('https://sophisticated-steel-production.up.railway.app/user', user).then((res) => {
+    await axios.post('http://localhost:4001/user', user).then((res) => {
       cookies.save('capabilities', res.data.capabilities);
       cookies.save('token', res.data.token);
       cookies.save('userRole', res.data.userRole);

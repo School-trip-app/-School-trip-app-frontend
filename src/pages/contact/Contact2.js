@@ -3,6 +3,9 @@ import './contact2.css'
 import { FaHome, FaEnvelope, FaPhoneSquareAlt } from "react-icons/fa";
 import Navbar from '../../components/navbar/Navbar';
 import Footer from '../../components/footer/Footer';
+import { useSelector } from 'react-redux';
+import { stateAuth } from '../../store/auth';
+import Register from '../../components/register/Register';
 
 const onSubmit = (e) => {
   e.preventDefault()
@@ -16,8 +19,12 @@ const onSubmit = (e) => {
 }
 
 function Contact() {
+  const state=useSelector(stateAuth);
+
   const [formStatus, setFormStatus] = useState('Send');
   return (
+    <>
+    {state.isLogin&&
     <>
     <Navbar/>
       <section className='top-background'>
@@ -67,6 +74,9 @@ function Contact() {
         </div>
       </div>
       <Footer/>
+    </>}
+    {!state.isLogin&&<Register/>}
+
     </>
   )
 }
