@@ -6,7 +6,7 @@ import contents from './content.js'; //fake data
 function Product() {
   return (
     <>
-      <section className='top-background'>
+      <section className='top-background-product'>
         <p>Store </p>
       </section>
       <section className='packages'>

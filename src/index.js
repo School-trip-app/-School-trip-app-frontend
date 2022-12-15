@@ -29,6 +29,8 @@ root.render(
       <Route element={<App />} path="/" />
       <Route element={<Events />} path='/events' />
       <Route element={<Blog />} path='/blog' />
+      <Route element={<Products />} path='/store' />
+      <Route element={<Photographers />} path='/photographers' />
       <Route element={<About />} path='/about' />
       <Route element={<Contact />} path='/contact' />
       <Route element={<Register />} path='/register' />
@@ -37,8 +39,6 @@ root.render(
     <TripDetails title={'Package El-7ob'} city={'Amman'}
       description={'Mount Nebo is an elevated ridge located in Jordan, approximately 710 metres above sea level. Part of the Abarim mountain range,Mount Nebo is mentioned in the Bible as the place where Moses was granted a view of the Promised Land before his death. The view from thesummit provides a panorama of the West Bank across the Jordan River valley. The city of Jericho is usually visible from the summit,as is Al-quds on a very clear day. The biblical town of Nebo, now known as Khirbet al-Mukhayyat.'}
       date={'20-jun-2022'} people={30} meals={"lunch,dinner"} price={10} rate={4.5} startTime={'10.00am'} endTime={'5:00pm'} pickup={'School'} drop={'home'} images={[]} />
-    <Photographers />
-    <Products />
   </Router>
 );
 

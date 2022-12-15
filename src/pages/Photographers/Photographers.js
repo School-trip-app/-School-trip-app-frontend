@@ -7,7 +7,7 @@ import { FaStar, FaStarHalfAlt, FaEnvelope } from "react-icons/fa";
 function Photographers() {
   return (
     <div>
-      <section className='top-background'>
+      <section className='top-background-photographer'>
         <p>Photographers </p>
       </section>
       <section className='packages'>
