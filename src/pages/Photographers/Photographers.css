@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap');
+
+* {
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "josefin sans", sans-serif;
+
+}
+
+.container {
+  max-width: 1300px;
+  width: 100%;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.section-sb {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.h1-sb {
+
+  line-height: 60px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.Cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Card {
+  flex: 0 0;
+
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #fff;
+}
+
+.btn-book-sb {
+  border: none;
+  outline: none;
+  background: #000;
+  color: #fff;
+  border-radius: 10px;
+  max-width: 120px;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid #000;
+}
+
+.btn-book-sb:hover {
+  background: #fff;
+  color: #000;
+}
+
+.icon-div {
+  width: 30%;
+  padding-top: 50px;
+  color: rgb(0, 9, 94);
+}
+
+.icon {
+  font-size: 2.5rem;
+}
+
+.icon-title {
+  display: flex;
+}
+
+.icon-title p {
+  margin: 3px 0px 0px 15px;
+}
+
+.icon-type {
+  margin: 0px 0px 30px 0px;
+}
