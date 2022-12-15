@@ -81,7 +81,7 @@
 }
 
 .like {
-   
+
     font-size: 18px;
     font-weight: 600;
     color: rgb(126, 160, 255);
@@ -127,7 +127,8 @@
     margin: 0;
     padding: 0;
 }
-.form{
+
+.form {
     height: auto;
     display: flex;
     flex-direction: row;
@@ -166,7 +167,7 @@ input[type="file"] {
 }
 
 .custom-file-upload {
-    display: flex;  
+    display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
@@ -187,7 +188,7 @@ input[type="file"] {
 }
 
 
-.divcomment{
+.divcomment {
     width: auto;
     height: auto;
     display: flex;
@@ -195,8 +196,9 @@ input[type="file"] {
     padding: 0px 20px;
 
 }
-.inputcomment{
-    width: 510px!important;
+
+.inputcomment {
+    width: 510px !important;
     height: 40px;
     border: 1px solid #000;
     border-radius: 5px;
@@ -206,8 +208,8 @@ input[type="file"] {
     margin: 0px 0px 10px 0px;
 }
 
-.post3{
-    
+.post3 {
+
 
     display: flex;
     flex-direction: row;
@@ -216,12 +218,12 @@ input[type="file"] {
     overflow: hidden;
 }
 
-.coment{
+.coment {
     margin: 0% !important;
 }
 
-.row3{
-    width: 510px!important;
+.row3 {
+    width: 510px !important;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     color: #000;
@@ -230,4 +232,25 @@ input[type="file"] {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+
+.top-background-about {
+    width: 100%;
+    height: 440px;
+    /*  */
+    background-image: url('https://images.unsplash.com/photo-1534531688091-a458257992cb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+    background-size: cover;
+    background-position: center -450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.top-background-about p {
+    color: rgb(255, 255, 255);
+    font-size: xxx-large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: bolder;
+    text-shadow: 3px 3px 3px rgb(0, 0, 0);
 }

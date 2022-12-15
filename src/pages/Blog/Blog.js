@@ -114,9 +114,20 @@ function Memory() {
 
     return (
         <>
-        <Navbar/>
-            <div>
+            <Navbar />
 
+            <div>
+                <section className='top-background-about'>
+                    <p>Memories</p>
+                </section>
+            </div>
+            <section className='packages'>
+                <div>
+                    <span className='check'> Old Is Gold </span>
+                    <p className='upcome'>Share your happy moments</p>
+                </div>
+            </section>
+            <div>
                 <div className='postform'>
 
                     <h1 className='titlepostform'>Add your memory</h1>
@@ -210,7 +221,7 @@ function Memory() {
                 )}
 
             </div>
-            <Footer/>
+            <Footer />
         </>
     )
 }

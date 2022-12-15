@@ -10,23 +10,25 @@
   align-items: center;
 }
 
-.top-background {
+.top-background-trips {
   width: 100%;
   height: 440px;
-  background-image: url('https://preview.colorlib.com/theme/tralive/assets/img/hero/h1_hero2.jpg.webp');
+  background-image: url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2021&q=80');
   background-size: cover;
-  background-position: center center;
+  background-position: center -450px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.top-background p {
-  color: rgb(255, 255, 255);
+.top-background-trips p {
+  color: white;
   font-size: xxx-large;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-family: "Josefin Sans", sans-serif;
   font-weight: bolder;
+  text-shadow: 3px 3px 3px rgb(0, 0, 0);
+
 }
 
 .packages {
@@ -88,6 +90,7 @@
   border-radius: 5px;
   box-shadow: 2px 2px 5px rgba(136, 136, 136, 0.653);
   font-family: var(--bs-body-font-family);
+  cursor: pointer;
 }
 
 
@@ -96,10 +99,7 @@
   transition-duration: 100ms;
 }
 
-
-
 .trip-card-image {
-
   width: 100%;
   height: 60%;
 }
@@ -153,7 +153,6 @@
   color: #7EA0FF;
   line-height: 1;
 }
-
 
 .card-data-middle {
   width: 100%;
@@ -212,4 +211,8 @@
   color: #00095E;
   font-family: "Josefin Sans", sans-serif;
   font-size: 18px;
+}
+
+.video {
+  background-color: white;
 }

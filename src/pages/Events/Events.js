@@ -16,7 +16,7 @@ function Trips() {
     <>
     <Navbar/>
     <div className='trips-page'>
-      <section className='top-background'>
+      <section className='top-background-trips'>
         <p>All Trips</p>
       </section>
       <section className='packages'>
