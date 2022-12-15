@@ -7,6 +7,7 @@ function Headern() {
     <div className='header'>
         <h1>LifeLone memories just a <dd>few seconds away</dd></h1>
         <p>Let's start your journey with us your dream will come true</p>
+        <img alt='img' src={`http://localhost:4001/`}/>
         <button><h3>Explore Destinations</h3></button>
         <div className='bg-bus'>
         <img src={bgbus} alt='bus' className='bg-car'/>

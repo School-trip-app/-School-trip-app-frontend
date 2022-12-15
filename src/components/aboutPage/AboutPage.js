@@ -9,7 +9,8 @@ import ibraheem from "./abt-img/ibraheem.jpg";
 import mhmd from "./abt-img/mhmd.jpg";
 import suhaib from "./abt-img/SuhiabAlnji.jpg";
 import Wlla from "./abt-img/walla.jpg";
-import "./aboutPage.css";
+import "./aboutPage.css"
+import AboutSlider from "../aboutSlider/AboutSlider";
 
 export default class AboutPage extends React.Component {
   render() {
@@ -143,6 +144,7 @@ export default class AboutPage extends React.Component {
             </div>
           </section>
         </div >
+    <AboutSlider/>
       </>
     );
   }

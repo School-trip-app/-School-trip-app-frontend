@@ -6,6 +6,7 @@ import Video from './components/videotour/Video';
 import JoPics from './components/jorPics/JoPics';
 import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
+import SpecialTrips from './components/specialTrips/SpecialTrips';
 function App() {
   return (
     <div >
@@ -13,6 +14,7 @@ function App() {
       <Headern />
       <Travel />
       <About />
+      <SpecialTrips/>
       <Video />
       <JoPics />
       <Footer/>

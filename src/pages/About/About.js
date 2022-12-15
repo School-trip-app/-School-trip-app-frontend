@@ -13,6 +13,7 @@ import "./about.css";
 import { useSelector } from 'react-redux';
 import { stateAuth } from '../../store/auth';
 import Register from "../../components/register/Register";
+import AboutSlider from "../../components/aboutSlider/AboutSlider";
 function About() {
   const state=useSelector(stateAuth);
   return (
@@ -145,6 +146,7 @@ function About() {
           </div>
         </section>
       </div >
+      <AboutSlider/>
       <Footer/>
     </>}
     {!state.isLogin&&<Register/>}

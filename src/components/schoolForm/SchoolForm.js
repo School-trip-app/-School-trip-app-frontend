@@ -7,10 +7,6 @@ import { setLogin} from '../../store/auth';
 function SchoolForm() {
   const dispatch = useDispatch();
   const [postData, setPostData] = useState({
-    creater: '',
-    title: '',
-    message: '',
-    tags: '',
     selectedFile: ''
 })
   const handlerFile=(e)=>{
@@ -32,7 +28,7 @@ function SchoolForm() {
     formData.append('image', postData.selectedFile);
     console.log(formData);
 
-    await axios.post(`http://localhost:4001/user`,formData).then((res) => {
+    await axios.post(`https://sophisticated-steel-production.up.railway.app/user`,formData).then((res) => {
       cookies.save('capabilities', res.data.capabilities);
       cookies.save('token', res.data.token);
       cookies.save('userRole', res.data.userRole);
@@ -41,7 +37,6 @@ function SchoolForm() {
       dispatch(setLogin());
     }).catch((err) => console.log(err || err));
   }
-
   return (
     <form className='SigninForm' onSubmit={handlerSubmit}>
       <input type='text' name='username' id='username' placeholder='Username' className='formInput' required ></input>
