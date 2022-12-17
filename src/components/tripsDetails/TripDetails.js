@@ -1,8 +1,8 @@
-import React from 'react';
 import './tripDetails.css';
 import { FaDirections, FaRegCalendarAlt, FaRegClock, FaDollarSign, FaMapMarkerAlt, FaStar, FaUsers, FaConciergeBell, FaHospitalUser } from 'react-icons/fa';
 import { useLocation } from 'react-router-dom';
 import Carousel from 'react-bootstrap/Carousel';
+import Navbar from '../../components/navbar/Navbar';
 
 
 
@@ -12,15 +12,34 @@ function TripDetails() {
   const { state } = location;
   console.log(state)
 
-  // const Hospitalrefactor = (item) => {
-  //   let hospital = []
-  //   if(item.phone){
+  const Hospitalrefactor = (item) => {
+    let hospital = []
+    for (let i = 0; i < item.length; i++) {
+      if (item[i].phone !== '') {
+        hospital.push(item[i])
+      }
+    }
 
-  //     hospital.push(item.phone)
+    hospital.sort(function (a, b) {
+      if (Number(a.distanceMeter) > Number(b.distanceMeter)) return 1;
+      if (Number(a.distanceMeter) < Number(b.distanceMeter)) return -1;
+      return 0;
+    });
 
+
+    console.log(hospital)
+    return hospital.slice(0, 4);
+  }
+
+
+
+
+  const Hospital = Hospitalrefactor(state.Hospitals)
 
   return (
     <>
+      <Navbar />
+
       <div >
         <Carousel>
           {state.packageImages.length > 0 && state.packageImages.map((item) => {
@@ -48,7 +67,7 @@ function TripDetails() {
               <FaDirections />
               <p className='title'>Description</p>
             </div>
-            <p>{state.description}</p>
+            <p>{state.packageDiscription}</p>
             <div className='TripDetails-body-part2-wicon'>
               <FaUsers />
               <p className='title'>Number of people</p>
@@ -88,15 +107,23 @@ function TripDetails() {
               <FaHospitalUser />
               <p className='title'>Nearest Hospital INFO</p>
             </div>
-            {state.Hospitals && state.Hospitals.map((item) => {
-              return (
-                <div>
-                  <p>{item.name}</p>
-                  <p>{item.address}</p>
-                  <p>{item.phone}</p>
+            <div className='hospital'>
+
+              {Hospital.length > 0 && Hospital.map((item) => {
+                return (
+                  <div className='hospital_info'>
+                    <p>{item.phone}</p>
+                    <p>{item.distanceMeter}</p>
+                    <p>{item.address}</p>
+                    <p>{item.name}</p>
+
                   </div>
-              )
-            })}
+                )
+              })
+              }
+
+            </div>
+
           </div>
           <button>Book Now</button>
         </div>

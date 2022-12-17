@@ -82,7 +82,6 @@
   border-radius: 5px;
   line-height: 1;
   line-height: 0;
-  -moz-user-select: none;
   transition: color 0.4s linear;
   z-index: 1;
   border: 0;
@@ -102,4 +101,21 @@
   color: rgb(255, 200, 0);
   font-weight: bold;
   font-size: x-large;
+}
+
+.hospital{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  margin: 40px auto;
+  gap: 20px;
+}
+
+.hospital_info{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 40px;
 }

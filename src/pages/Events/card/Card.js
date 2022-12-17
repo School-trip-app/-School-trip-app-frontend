@@ -4,7 +4,7 @@ import { Routes, Route, useNavigate } from 'react-router-dom';
 
 function Card({ packageName, price, date, time, image, city, data }) {
 
-  let imageurl = 'https://cdn.discordapp.com/attachments/1029838563874979883/1052258001827926056/logo.png'
+  let imageurl = 'https://i.ibb.co/nk8BLbt/logo.png'
 
   if (image.length > 0) {
     imageurl = image[0].imageUrl
@@ -20,7 +20,7 @@ function Card({ packageName, price, date, time, image, city, data }) {
   return (
     <div className='trip-card-holder' onClick={() => navigateToDetails(data)}>
       <div className='trip-card-image'>
-        <img src={imageurl} alt='packageImage' />
+        <img src={imageurl} alt='packageImage' style={{ width: '100%', height: '100%' }} />
       </div>
       <div className='trip-card-data'>
         <div className='card-data-header'>
