@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Card({ packageName, price, date, time, image, city }) {
+function Card({ packageName, price, date, time, image, city, onClick }) {
 
   return (
-    <div className='trip-card-holder'>
+    <div className='trip-card-holder' onClick={onClick}>
       <div className='trip-card-image'>
         <img src={image} alt='packageImage' />
       </div>
@@ -18,7 +18,7 @@ function Card({ packageName, price, date, time, image, city }) {
         <div className='card-data-bottom'>
           <h4 className='card-data-bottom-h4'>{date}</h4>
           <div className='card-data-bottom-gap'></div>
-          <p className='card-data-bottom-p'>{time}</p>
+          <p className='card-data-bottom-p'>{`time`}</p>
         </div>
       </div>
     </div >

@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, auto));
   gap: 0;
-align-items: center;
+  align-items: center;
 }
 
 .images-travels img {
@@ -14,6 +14,23 @@ align-items: center;
 .images-travels img :hover {
   width: 103.8px;
   position: relative;
-  outline: 5px blanchedalmond solid;
+  background-color: rgba(0, 0, 0, 0.145);
+}
 
+.div-one-image,
+.div-two-image,
+.div-three-image,
+.div-four-image,
+.div-five-image {
+  width: 100%;
+  height: 100%;
+}
+
+.div-one-image img,
+.div-two-image img,
+.div-three-image img,
+.div-four-image img,
+.div-five-image img {
+  width: 100%;
+  height: 100%;
 }

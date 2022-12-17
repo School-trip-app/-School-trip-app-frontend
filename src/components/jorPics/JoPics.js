@@ -9,11 +9,21 @@ import './joPics.css'
 function JoPics() {
   return (
     <div className='images-travels'>
-      <img src={amman} alt='travel' />
-      <img src={dead} alt='travel' />
-      <img src={istockphoto} alt='travel' />
-      <img src={Umm} alt='travel' />
-      <img src={Ajloun_Castle} alt='travel' />
+      <div className='div-one-image'>
+        <img src={amman} alt='travel' />
+      </div>
+      <div className='div-two-image' >
+        <img src={Ajloun_Castle} alt='travel' />
+      </div>
+      <div className='div-three-image'>
+        <img src={Umm} alt='travel' />
+      </div>
+      <div className='div-four-image'>
+        <img src={istockphoto} alt='travel' />
+      </div>
+      <div className='div-five-image'>
+        <img src={dead} alt='travel' />
+      </div>
     </div>
   )
 }
