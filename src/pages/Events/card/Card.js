@@ -1,11 +1,26 @@
 import React from 'react'
+import { Routes, Route, useNavigate } from 'react-router-dom';
 
-function Card({ packageName, price, date, time, image, city }) {
+
+function Card({ packageName, price, date, time, image, city, data }) {
+
+  let imageurl = 'https://cdn.discordapp.com/attachments/1029838563874979883/1052258001827926056/logo.png'
+
+  if (image.length > 0) {
+    imageurl = image[0].imageUrl
+  }
+ 
+  const navigate = useNavigate();
+
+  const navigateToDetails = (item) => {
+    navigate('/tripdetails', { state: item });
+  };
+
 
   return (
-    <div className='trip-card-holder'>
+    <div className='trip-card-holder' onClick={() => navigateToDetails(data)}>
       <div className='trip-card-image'>
-        <img src={image} alt='packageImage' />
+        <img src={imageurl} alt='packageImage' />
       </div>
       <div className='trip-card-data'>
         <div className='card-data-header'>
