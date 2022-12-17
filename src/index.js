@@ -8,6 +8,7 @@ import Events from './pages/Events/Events';
 import About from './pages/About/About';
 import Contact from './pages/contact/Contact2';
 import Blog from './pages/Blog/Blog';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Register from './components/register/Register';
 import { Provider } from 'react-redux';

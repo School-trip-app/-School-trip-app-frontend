@@ -103,4 +103,11 @@
     font-weight: bold;
     font-size: x-large;
   }
+  .carousel-text-box {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
   
+  .carousel-img {
+    object-fit: cover;
+    aspect-ratio: 16/9;
+  }
