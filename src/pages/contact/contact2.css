@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap');
+
+.contact-title { 
+  color: #00095e !important;
+  font-family: "Josefin Sans", sans-serif !important;
+  font-size: 27px !important;
+  font-weight: 600 !important;
+  margin-bottom: 20px !important;
+}
+
+.textarea-sh {
+  font-family: inherit;
+  width: 94%;
+  height: 140px;
+  padding: 22px 20px;
+  resize: none;
+  outline: none;
+  background: transparent;
+  border: 1px black solid;
+  border-color: rgba(0, 0, 0, 0.153);
+}
+
+.text-sh {
+  width: 45%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  margin-right: 30px;
+  outline: none;
+  border: 1px black solid;
+  border-color: rgba(0, 0, 0, 0.153);
+
+}
+
+.email-sh {
+  width: 45%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  outline: none;
+  border: 1px black solid;
+  border-color: rgba(0, 0, 0, 0.153);
+}
+
+.contact-info {
+  margin-bottom: 25 px;
+
+}
+
+.contact-info__icon {
+  margin-right: 20px;
+}
+
+.media {
+  display: flex;
+  align-items: flex-start;
+}
+
+.button {
+  font-family: "Josefin Sans", sans-serif;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 18px 44px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 8px 0px;
+  cursor: pointer;
+}
+
+.sbtbutton {
+  background-color: white;
+  color: black;
+  border: 2px solid #e7e7e7;
+}
+
+.contact-section {
+  display: flex;
+  width: 100%;
+  flex-flow: row nowrap;
+  margin: 100px 0px;
+}
+
+.form-div {
+  width: 70%;
+  color: rgb(0, 9, 94);
+}
+
+.icon-div {
+  width: 30% !important;
+  padding-top: 50px !important;
+  color: rgb(0, 9, 94) !important;
+}
+
+.icon {
+  font-size: xx-large !important;
+}
+
+.icon-title {
+  display: flex !important;
+}
+
+.icon-title h5 {
+  margin: 3px 0px 0px 15px !important;
+}
+
+.icon-type {
+  margin: 0px 0px 30px 0px !important;
+}
+
+.top-background-contact {
+  width: 100%;
+  height: 440px;
+  background-image: url('https://images.unsplash.com/photo-1456428746267-a1756408f782?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-background-contact p {
+  color: rgb(255, 255, 255);
+  font-size: xxx-large;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: bolder;
+  text-shadow: 3px 3px 3px rgb(0, 0, 0);
+}
+
