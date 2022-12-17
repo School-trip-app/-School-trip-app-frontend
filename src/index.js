@@ -8,7 +8,7 @@ import Events from './pages/Events/Events';
 import About from './pages/About/About';
 import Contact from './pages/contact/Contact2';
 import Blog from './pages/Blog/Blog';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Register from './components/register/Register';
 import { Provider } from 'react-redux';
 import store from './store/store';
@@ -31,7 +31,7 @@ root.render(
         <Route element={<Photographers />} path='/photographers' />
         <Route element={<Product />} path='/store' />
         <Route element={<TripDetails />} path='/tripdetails' />
-        <Route element={< SpecialTrips/>} path='/specialtrips' />
+        <Route element={< SpecialTrips />} path='/specialtrips' />
       </Routes>
     </Router>
   </Provider >
