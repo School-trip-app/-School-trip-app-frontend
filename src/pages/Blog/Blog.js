@@ -124,12 +124,12 @@ function Memory() {
             <input className='input' type='text' maxlength="40" placeholder='Title' name='title' />
             <textarea className='textarea' type='text' maxlength="250" placeholder='Description' name='description' />
             <label for="file-upload" name='file' className="custom-file-upload">
-              <i className="fa fa-cloud-upload"></i> <BiImageAdd style={{ color: 'rgb(126, 160, 255)', fontSize: '35px' }} />
+              <i className="fa fa-cloud-upload"></i> <BiImageAdd style={{ color: 'rgb(26, 45, 109)', fontSize: '35px' }} />
             </label>
             <input id="file-upload" type="file"   onChange={handelchange} />
             <button className='btn'
               type='submit'
-            ><AiOutlineSend style={{ color: 'rgb(126, 160, 255)', fontSize: '35px' }} /></button>
+            ><AiOutlineSend style={{ color: 'rgb(26, 45, 109)', fontSize: '35px' }} /></button>
           </form>
         </div>
         {memory && memory.map((item) => {
@@ -158,19 +158,19 @@ function Memory() {
                     <div className='row2'>
                       <button className='icon-blog'
                         onClick={() => { handledelete(item.id) }}
-                      ><AiOutlineDelete style={{ color: 'rgb(126, 160, 255)' }} size={27} /></button>
+                      ><AiOutlineDelete style={{ color: 'rgb(26, 45, 109)' }} size={27} /></button>
                       <button className='icon-blog'
                         onClick={() => { handellike(item.id) }}
                         onMouseEnter={() => { handleshowlike(item.likes) }}>
                         {like === item.likes ? <p className='like'>{item.likes}</p> :
-                          <AiFillLike style={{ color: 'rgb(126, 160, 255)' }} size={25} />
+                          <AiFillLike style={{ color: 'rgb(26, 45, 109)' }} size={25} />
                         }
                       </button>
                       <button className='icon-blog'
                         onClick={() => { handeldislike(item.id) }}
                         onMouseEnter={() => { handleshowdislike(item.dislikes) }}>
                         {dislike === item.dislikes ? <p className='like'>{item.dislikes}</p> :
-                          <AiFillDislike style={{ color: 'rgb(126, 160, 255)' }} size={25} />
+                          <AiFillDislike style={{ color: 'rgb(26, 45, 109)' }} size={25} />
                         }
                       </button>
                     </div>
@@ -179,7 +179,7 @@ function Memory() {
                     <input className='inputcomment' type='text' placeholder='Add a comment' name='comment' />
                     <button className='icon-blog'
                       type='submit'
-                    ><BiCommentDetail style={{ color: 'rgb(126, 160, 255)' }} size={27} /></button>
+                    ><BiCommentDetail style={{ color: 'rgb(26, 45, 109)' }} size={27} /></button>
                   </form>
                 </div>
               </div>

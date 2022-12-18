@@ -1,11 +1,25 @@
 import React from 'react';
+import { useEffect } from 'react';
 import './Photographers.css';
-import PhotographersData from './PhotographersData';
 import { FaStar, FaEnvelope } from "react-icons/fa";
 import Navbar from '../../components/navbar/Navbar';
 import Footer from '../../components/footer/Footer'
+import {MdAttachMoney} from 'react-icons/md'
+import { useSelector, useDispatch } from "react-redux";
+import { getphotographerAsync, selectPhotographer } from "../../store/Photographers-re"
 
 function Photographers() {
+  
+  const dispatch = useDispatch();
+  const photographers = useSelector(selectPhotographer);
+  console.log(photographers);
+
+
+  useEffect(() => {
+    dispatch(getphotographerAsync());
+  }, [dispatch]);
+
+
   return (
     <>
       <Navbar />
@@ -24,14 +38,22 @@ function Photographers() {
             <div className='container'>
               <h3>Photographers</h3>
               <div className='Cards'>
-                {PhotographersData.map((PhotographersData) => (
-                  <div key={PhotographersData.id} className='Card'>
-                    <img src={PhotographersData.image} alt='Photographers' />
-                    <h3 className='h1-sb' >{PhotographersData.name}</h3>
-                    <p className=' icon '><FaEnvelope />{PhotographersData.email}</p>
-                    <p>{PhotographersData.phoneNumber}</p>
-                    <p><FaStar />{PhotographersData.rate}</p>
+                {photographers.map((item) => (
+                  <div key={item.id} className='Card'>
+                    <img src={item.image} alt='Photographers' />
+                    <h3 className='h1-sb' >{item.name}</h3>
+                    <p className=' icon '>
+                      <FaEnvelope />{item.email}
+                    </p>
+                    <p>{item.phoneNumber}</p>
+                    <p className='ratediv'>
+                      <FaStar style={{ marginBottom: 'auto' ,marginTop: 'auto' }}
+                       />{item.rate}
+                    </p>
+                    <div className='btnphoto'>
+                    <p className='btn-book-sb1'>{item.price} <MdAttachMoney /></p>
                     <button className='btn-book-sb'>Book</button>
+                    </div>
                   </div>
                 ))}
               </div>
