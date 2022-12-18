@@ -92,9 +92,9 @@
  .bg-bus .bus-car{
         position: absolute;
         left: 50%;
-        width: 50%;
+        width: 60%;
         animation: up-and-down 8s linear infinite;
-        top: 287px;
+        top: 185px;
         transform: translateX(-50%);
     }
 
