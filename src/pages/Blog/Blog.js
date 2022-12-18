@@ -126,7 +126,7 @@ function Memory() {
             <label for="file-upload" name='file' className="custom-file-upload">
               <i className="fa fa-cloud-upload"></i> <BiImageAdd style={{ color: 'rgb(126, 160, 255)', fontSize: '35px' }} />
             </label>
-            <input id="file-upload" type="file" onChange={handelchange} />
+            <input id="file-upload" type="file"   onChange={handelchange} />
             <button className='btn'
               type='submit'
             ><AiOutlineSend style={{ color: 'rgb(126, 160, 255)', fontSize: '35px' }} /></button>

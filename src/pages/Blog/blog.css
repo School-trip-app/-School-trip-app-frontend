@@ -162,7 +162,7 @@
     outline: none;
 }
 
-input[type="file"] {
+#file-upload[type="file"] {
     display: none;
 }
 

@@ -33,6 +33,7 @@ function SchoolForm() {
       cookies.save('token', res.data.token);
       cookies.save('userRole', res.data.userRole);
       cookies.save('username', res.data.username);
+      cookies.save('userId', res.data.id);
       console.log(res.data)
       dispatch(setLogin());
     }).catch((err) => console.log(err || err));

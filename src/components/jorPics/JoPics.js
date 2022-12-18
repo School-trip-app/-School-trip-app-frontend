@@ -1,10 +1,6 @@
 import React from 'react'
 import './joPics.css'
-import amman from '../../assets/amman-jordan-08bcc7bf3103.jpg';
-import dead from '../../assets/dead-sea-jordan.jpg';
-import istockphoto from '../../assets/istockphoto-1170941515-612x612.jpg';
-import Umm from '../../assets/Umm-Qais.jpg';
-import Ajloun_Castle from '../../assets/Ajloun_Castle.jpg';
+
 
 function JoPics() {
   return (

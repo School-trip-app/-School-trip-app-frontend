@@ -12,6 +12,8 @@ function Navbar() {
     cookies.remove('username');
     cookies.remove('userRole');
     cookies.remove('capabilities')
+    cookies.remove('userId');
+
     dispatch(setLogout());
   }
   return (
