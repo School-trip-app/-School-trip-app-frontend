@@ -30,9 +30,10 @@
   .SpecialTrips-body-form input {
     width: 50%;
     height: 100%;
+    margin-top: 30px;
+    outline: none;
     display: block;
     padding: 15px;
-    margin: 10px 0px;
     width: 90%;
     border: 2.2px dashed rgb(173, 161, 247);
     border-top: none;
@@ -52,6 +53,7 @@
     width: 50%;
     align-self: flex-end;
     height: 100%;
+    margin-bottom: 50px;
   }
   
   .SpecialTrips-body-image img {
