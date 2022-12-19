@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaShoppingCart, FaRegBookmark, FaStar, FaFireAlt } from 'react-icons/fa';
+import { FaShoppingCart, FaRegBookmark, FaFireAlt } from 'react-icons/fa';
 import './ProductCard.css'
 import { useDispatch } from 'react-redux';
 import { setProdectId } from '../../store/orders';
@@ -22,16 +22,13 @@ function ProductCard(props) {
             <h3 className='productName'>{props.name}</h3>
             <div className='displayStack_1'>
               <div className='productPrice'>${props.price}</div>
-              <div className='productSales'>{props.totalSales} units sold</div>
+              <div className='productSales'>category : {props.category}</div>
             </div>
             <div className='displayStack_2'>
-              <div className='productRating'>
-                {[...Array(props.rating)].map((index) => (
-                  <FaStar id={index + 1} key={index} />
-                ))}
-              </div>
-              <div className='productTime'>{props.timeLeft} days left</div>
-              <button style={{ padding: '15px' }} onClick={()=>handlerBook(props.id)}>Book</button>
+              <p className='productRating'>
+                {props.discreption}
+              </p>
+              <button id='btn-book' onClick={()=>handlerBook(props.id)}>Book</button>
             </div>
           </div>
         </div>

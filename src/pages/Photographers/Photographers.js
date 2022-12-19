@@ -1,6 +1,5 @@
 import React ,{useEffect}from 'react';
 import './Photographers.css';
-import PhotographersData from './PhotographersData';
 import { FaStar, FaEnvelope } from "react-icons/fa";
 import Navbar from '../../components/navbar/Navbar';
 import Footer from '../../components/footer/Footer'

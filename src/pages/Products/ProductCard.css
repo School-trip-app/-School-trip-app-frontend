@@ -30,21 +30,29 @@ html {
 
 }
 .products{
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
 }
-.productList {
- display: grid;
- grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-}
+
 
 .productCard {
   position: relative;
   background-color: var(--color-grey-primary);
   margin: 1rem;
   flex: 1 0 25rem;
-  max-width: 30rem;
+  height: 95%;
+  border-radius: 20px;
+  /*max-width: 30rem;
   max-height: 50rem;
-  transition: 0.2s;
+  */transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
 }
 
 .productCard:hover {
@@ -53,7 +61,6 @@ html {
 }
 
 .productImage {
-  margin-top: 2rem;
   max-width: 100%;
   height: auto;
 }
@@ -65,6 +72,10 @@ html {
   font-size: 2rem;
   transition: 0.2s;
   cursor: pointer;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
 }
 
 .productCard_wishlist {
@@ -108,4 +119,16 @@ html {
 .productSales,
 .productTime {
   font-size: 1.1rem;
+}
+.productCard img{
+  width: 100%;
+  height: 300px;
+}
+#btn-book{
+  margin-bottom: 20px;
+  margin-left: 30px;
+  padding-top: 10px;
+  padding-right: 15px;
+  padding-left: 20px;
+  padding-bottom: 10px;
 }
