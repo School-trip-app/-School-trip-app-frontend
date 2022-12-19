@@ -1,8 +1,14 @@
 import React from 'react';
 import { FaShoppingCart, FaRegBookmark, FaStar, FaFireAlt } from 'react-icons/fa';
 import './ProductCard.css'
-
+import { useDispatch } from 'react-redux';
+import { setProdectId } from '../../store/orders';
 function ProductCard(props) {
+  const dispatch= useDispatch();
+  const handlerBook=(id)=>{
+    console.log(id);
+    dispatch(setProdectId(id))
+  }
   return (
     <>
       <div className='productList'>
@@ -25,6 +31,7 @@ function ProductCard(props) {
                 ))}
               </div>
               <div className='productTime'>{props.timeLeft} days left</div>
+              <button style={{ padding: '15px' }} onClick={()=>handlerBook(props.id)}>Book</button>
             </div>
           </div>
         </div>

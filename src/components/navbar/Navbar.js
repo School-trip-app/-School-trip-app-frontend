@@ -30,6 +30,7 @@ function Navbar() {
           <Link to='/store'><li>Store</li></Link>
           <Link to='/about'><li>About</li></Link>
           <Link to='/contact'><li>Contact</li></Link>
+          <Link to='/cart'><li>Cart</li></Link>
           {/* adding number */}
           <li className='call' onClick={handlerLogout}>
           Logout          </li>

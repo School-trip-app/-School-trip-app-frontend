@@ -3,12 +3,16 @@ import { FaDirections, FaRegCalendarAlt, FaRegClock, FaDollarSign, FaMapMarkerAl
 import { useLocation } from 'react-router-dom';
 import Carousel from 'react-bootstrap/Carousel';
 import Navbar from '../../components/navbar/Navbar';
-
+import { useSelector, useDispatch } from 'react-redux';
+import { setPackId,stateOrder } from '../../store/orders';
 
 
 function TripDetails() {
-
+  const packState=useSelector(stateOrder);
+  console.log(packState)
   const location = useLocation();
+  const dispatch=useDispatch();
+
   const { state } = location;
   console.log(state)
 
@@ -31,8 +35,9 @@ function TripDetails() {
     return hospital.slice(0, 4);
   }
 
-
-
+ const handlerBook=()=>{
+  dispatch(setPackId(state.id));
+ };
 
   const Hospital = Hospitalrefactor(state.Hospitals)
 
@@ -42,10 +47,10 @@ function TripDetails() {
 
       <div >
         <Carousel>
-          {state.packageImages.length > 0 && state.packageImages.map((item) => {
+          {state.packageImages.length > 0 && state.packageImages.map((item,index) => {
             return (
-              <Carousel.Item>
-                <img
+              <Carousel.Item key={index}>
+                <img 
                   className=" d-block w-100"
                   src={item.imageUrl}
                   alt="slide"
@@ -109,23 +114,21 @@ function TripDetails() {
             </div>
             <div className='hospital'>
 
-              {Hospital.length > 0 && Hospital.map((item) => {
+              {Hospital.length > 0 && Hospital.map((item, index) => {
                 return (
-                  <div className='hospital_info'>
+                  <div className='hospital_info' key={index}>
                     <p>{item.phone}</p>
                     <p>{item.distanceMeter}</p>
                     <p>{item.address}</p>
                     <p>{item.name}</p>
-
                   </div>
                 )
               })
               }
-
             </div>
 
           </div>
-          <button>Book Now</button>
+          <button onClick={handlerBook}>Book Now</button>
         </div>
       </div >
     </>

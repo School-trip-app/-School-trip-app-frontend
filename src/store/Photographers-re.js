@@ -1,6 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
+
 const url = "https://sophisticated-steel-production.up.railway.app/photographer";
+
 
 
 export const photographerSlice = createSlice({

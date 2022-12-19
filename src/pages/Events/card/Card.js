@@ -6,7 +6,7 @@ function Card({ packageName, price, date, time, image, city, data }) {
 
   let imageurl = 'https://i.ibb.co/nk8BLbt/logo.png'
 
-  if (image.length > 0) {
+  if (image?.length > 0) {
     imageurl = image[0].imageUrl
   }
  

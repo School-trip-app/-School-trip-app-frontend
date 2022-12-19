@@ -1,0 +1,10 @@
+
+.cart{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.cart .trip-card-holder{
+    height: 490px;
+}

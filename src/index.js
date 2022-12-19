@@ -16,6 +16,7 @@ import Photographers from './pages/Photographers/Photographers';
 import Product from './pages/Products/Products';
 import TripDetails from './components/tripsDetails/TripDetails';
 import SpecialTrips from './components/specialTrips/SpecialTrips';
+import Cart from './pages/cart/cart';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
@@ -32,6 +33,7 @@ root.render(
         <Route element={<Product />} path='/store' />
         <Route element={<TripDetails />} path='/tripdetails' />
         <Route element={< SpecialTrips />} path='/specialtrips' />
+        <Route element={<Cart/>} path='/cart'/>
       </Routes>
     </Router>
   </Provider >
