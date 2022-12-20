@@ -5,46 +5,50 @@ import './Profile.css'
 import cookies from 'react-cookies';
 import { BiImageAdd } from 'react-icons/bi';
 import axios from 'axios';
-
+import { useSelector } from "react-redux";
+import { stateAuth } from '../../store/auth';
+import Register from '../../components/register/Register';
 
 
 
 function Profile() {
-    
-    const getUser=async()=>{
-        await axios.get(`https://sophisticated-steel-production.up.railway.app/user/${cookies.load('userId')}`).then((res)=>{
-           console.log(res.data.imageprofile)
-          cookies.save('imageprofile',`https://sophisticated-steel-production.up.railway.app/${res.data.imageprofile}`);
+    const state = useSelector(stateAuth);
+
+    const getUser = async () => {
+        await axios.get(`https://sophisticated-steel-production.up.railway.app/user/${cookies.load('userId')}`).then((res) => {
+            cookies.save('imageprofile', `https://sophisticated-steel-production.up.railway.app/${res.data.imageprofile}`);
         });
-    }    
+    }
 
-
-        const handelchange = (e) => {
-
-            const id = cookies.load('userId');
-            const formData = new FormData();
-            formData.append('image', e.target.files[0]);
     
-    
-            axios.put(`https://sophisticated-steel-production.up.railway.app/users/${id}`, formData,
-                {
-                    headers: {
-                        Authorization: `Bearer ${cookies.load('token')}`
-                    }
+    const handelchange = (e) => {
+
+        const id = cookies.load('userId');
+        const formData = new FormData();
+        formData.append('image', e.target.files[0]);
+
+
+        axios.put(`https://sophisticated-steel-production.up.railway.app/users/${id}`, formData,
+            {
+                headers: {
+                    Authorization: `Bearer ${cookies.load('token')}`
                 }
-            ).then(res => {
-                getUser();
             }
-            ).catch(err => {
-                console.log(err);
-            }
-            )
-    
+        ).then(res => {
+            getUser();
+        }
+        ).catch(err => {
+            console.log(err);
+        }
+        )
+
     }
 
     return (
         <>
-            <Navbar />
+          {state.isLogin&&
+          <>
+          <Navbar />
             <div className="card user-card-full">
                 <div className="row m-l-0 m-r-0">
                     <div className="col-sm-4 bg-c-lite-green user-profile">
@@ -94,8 +98,11 @@ function Profile() {
                     </div>
                 </div>
             </div>
-
             <Footer />
+            </>
+        }
+        {!state.isLogin&&<Register/>}
+
         </>
     )
 

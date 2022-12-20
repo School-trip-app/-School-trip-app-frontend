@@ -10,8 +10,12 @@ import { AiOutlineDelete } from 'react-icons/ai';
 import { BiCommentDetail } from 'react-icons/bi';
 import { AiOutlineClose } from 'react-icons/ai';
 import Navbar from '../../components/navbar/Navbar';
-import Footer from '../../components/footer/Footer'
+import Footer from '../../components/footer/Footer';
+import { stateAuth } from '../../store/auth';
+import Register from '../../components/register/Register';
+import { useSelector } from "react-redux";
 function Memory() {
+  const state = useSelector(stateAuth);
 
   const toast = useToast()
 
@@ -105,6 +109,8 @@ function Memory() {
   }, [])
   return (
     <>
+      {state.isLogin &&
+     <>
       <Navbar />
       <div>
         <section className='top-background-about'>
@@ -189,6 +195,8 @@ function Memory() {
         )}
       </div>
       <Footer />
+      </>}
+      {!state.isLogin &&<Register/>}
     </>
   )
 }

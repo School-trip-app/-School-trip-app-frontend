@@ -31,8 +31,7 @@ export default class AboutPage extends React.Component {
                   <div class="col-sm-12 col-md-12 mb-4">
                     <h3 class="text-center mt-4 text-secondary" style={{ 'padding': '50px' }}>Our Team</h3>
                   </div>
-                  <div className="row" style={{ 'display': 'grid'},
-{ 'justify-content': 'center' }}>
+                  <div className="row">
                     <div className="col-md-3" style={{ 'margin-right': '100px' }}>
                       <div className="text-center" >
                         <img src={suhaib} class="w-100 rounded-circle" alt="Suhaib" />
@@ -132,7 +131,7 @@ export default class AboutPage extends React.Component {
                           </a>
                           <a
                             className="about-icon"
-                            href=""
+                            href="$"
                           >
                             <FaLinkedinIn />
                           </a></div>

@@ -4,17 +4,21 @@ import { useLocation } from 'react-router-dom';
 import Carousel from 'react-bootstrap/Carousel';
 import Navbar from '../../components/navbar/Navbar';
 import { useSelector, useDispatch } from 'react-redux';
-import { setPackId,stateOrder } from '../../store/orders';
-
-
+import { setPackId, stateOrder } from '../../store/orders';
+import cookies from 'react-cookies';
+import { stateAuth } from '../../store/auth';
+import Footer from '../../components/footer/Footer';
+import Register from '../register/Register';
 function TripDetails() {
-  const packState=useSelector(stateOrder);
+  const packState = useSelector(stateOrder);
+  const stateauth=useSelector(stateAuth);
+
   console.log(packState)
   const location = useLocation();
-  const dispatch=useDispatch();
+  const dispatch = useDispatch();
 
   const { state } = location;
-  console.log(state)
+
 
   const Hospitalrefactor = (item) => {
     let hospital = []
@@ -31,26 +35,26 @@ function TripDetails() {
     });
 
 
-    console.log(hospital)
     return hospital.slice(0, 4);
   }
 
- const handlerBook=()=>{
-  dispatch(setPackId(state.id));
- };
+  const handlerBook = () => {
+    dispatch(setPackId(state.id));
+  };
 
   const Hospital = Hospitalrefactor(state.Hospitals)
 
   return (
     <>
+    {stateauth.isLogin&&
+    <>
       <Navbar />
-
       <div >
         <Carousel>
-          {state.packageImages.length > 0 && state.packageImages.map((item,index) => {
+          {state.packageImages.length > 0 && state.packageImages.map((item, index) => {
             return (
               <Carousel.Item key={index}>
-                <img 
+                <img
                   className=" d-block w-100"
                   src={item.imageUrl}
                   alt="slide"
@@ -126,11 +130,14 @@ function TripDetails() {
               })
               }
             </div>
-
           </div>
-          <button onClick={handlerBook}>Book Now</button>
+          {cookies?.load('capabilities').includes('canBookTrip') && <button onClick={handlerBook}>Book Now</button>}
         </div>
       </div >
+      <Footer/>
+    </>
+    }
+    {!stateauth.isLogin&&<Register/>}
     </>
   )
 }

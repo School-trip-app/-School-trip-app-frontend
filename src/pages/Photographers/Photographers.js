@@ -7,7 +7,9 @@ import { useDispatch,useSelector } from 'react-redux';
 import { setPhotId } from '../../store/orders';
 import { getphotographerAsync, selectPhotographer } from "../../store/Photographers-re"
 import {MdAttachMoney} from 'react-icons/md'
-
+import cookies from 'react-cookies';
+import { stateAuth } from '../../store/auth';
+import Register from '../../components/register/Register';
 function Photographers() {
   const dispatch = useDispatch();
   const handlerBook = (id) => {
@@ -15,13 +17,15 @@ function Photographers() {
     dispatch(setPhotId(id));
   }
   const photographers = useSelector(selectPhotographer);
-
+  const state = useSelector(stateAuth);
   useEffect(() => {
     dispatch(getphotographerAsync());
   }, [dispatch]);
 
   return (
     <>
+        {state.isLogin&&
+        <>
        <Navbar />
       <div>
         <section className='top-background-photographer'>
@@ -52,7 +56,7 @@ function Photographers() {
                     </p>
                     <div className='btnphoto'>
                     <p className='btn-book-sb1'>{item.price} <MdAttachMoney /></p>
-                    <button className='btn-book-sb' onClick={()=>handlerBook(item.id)}>Book</button>
+                    {cookies?.load('capabilities').includes('canBookTrip')&&<button className='btn-book-sb' onClick={()=>handlerBook(item.id)}>Book</button>}
                     </div>
                   </div>
                 ))}
@@ -62,8 +66,10 @@ function Photographers() {
         </div>
       </div>
       <Footer />
+      </>
+     }
+      {!state.isLogin&&<Register/>}
     </>
   );
 }
 export default Photographers;
-// onClick={()=>handlerBook(PhotographersData.id)}

@@ -5,16 +5,22 @@ import Navbar from '../../components/navbar/Navbar';
 import Footer from '../../components/footer/Footer'
 import { useSelector, useDispatch } from "react-redux";
 import { getproductAsync, selectProduct } from "../../store/products-re"
-
+import { stateAuth } from '../../store/auth';
+import Register from '../../components/register/Register';
 function Product() {
   const dispatch = useDispatch();
   const products = useSelector(selectProduct);
+  const state = useSelector(stateAuth);
+
   useEffect(() => {
     dispatch(getproductAsync());
   }, [dispatch]);
   return (
     <>
-      <Navbar />
+    
+    {state.isLogin&&
+    <>
+    <Navbar />
       <section className='top-background-product'>
         <p>Store </p>
       </section>
@@ -38,6 +44,9 @@ function Product() {
         ))}
       </div>
       <Footer />
+       </>
+       }
+       {!state.isLogin&&<Register/>}
     </>
   )
 

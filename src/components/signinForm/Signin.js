@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import base64 from 'base-64';
 import axios from 'axios';
 import { setLogin } from '../../store/auth';
 import { useDispatch } from 'react-redux';
 import cookies from 'react-cookies';
+
 function Signin() {
   const dispatch = useDispatch();
+  const [error, setError] = useState('');
   const handlerSubmit = async (e) => {
     e.preventDefault();
     const user = {
@@ -25,11 +27,12 @@ function Signin() {
       cookies.save('username', res.data.username);
       cookies.save('userId', res.data.id);
       cookies.save('email', res.data.email);
+      cookies.save('imageprofile',`https://sophisticated-steel-production.up.railway.app/${res.data.imageprofile}`);
       cookies.save('phonenumber', res.data.phonenumber);
-      console.log(res.data);
 
     })).catch(err => {
-      console.log(err);
+      console.log(err.response.data);
+      setError(err.response.data);
     })
   }
   return (
@@ -40,7 +43,7 @@ function Signin() {
         <input type='password' name='password' id='password' placeholder='Password' className='formInput' required ></input>
         <input type='submit' name='submit' value='CONTINUE' className='formSubmit' ></input>
       </form>
-      <p id='errMsg'>{''}</p>
+      <p id='errMsg'>{error!==''&&error}</p>
     </div>
   )
 }

@@ -33,8 +33,6 @@ function Navbar() {
           <Link to='/blog'><li>Memories</li></Link>
           <Link to='/photographers'><li>Photographers</li></Link>
           <Link to='/store'><li>Store</li></Link>
-          {/* <Link to='/about'><li>About</li></Link> */}
-          {/* <Link to='/contact'><li>Contact</li></Link> */}
           <Link to='/cart'><li>Cart</li></Link>
           <Dropdown>
             <Dropdown.Toggle variant="Warning" id="dropdown-basic">

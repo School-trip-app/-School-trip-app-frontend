@@ -7,12 +7,16 @@ import { useSelector, useDispatch } from 'react-redux';
 import axios from 'axios';
 import cookies from 'react-cookies';
 import Payment from '../../components/payment/Payment';
+import { stateAuth } from '../../store/auth';
+import Register from '../../components/register/Register';
 function Cart() {
   const state = useSelector(stateOrder);
   const [packag, setpackage] = useState([]);
   const [photographer, setphoter] = useState([]);
   const [product, setprodct] = useState([]);
   const [pay, setPay]=useState(false);
+  const stateAut = useSelector(stateAuth);
+
   let products = [];
   const dispatch = useDispatch();
   const getPackage = async () => {
@@ -41,7 +45,6 @@ function Cart() {
           setprodct(res.data);
         });
       }
-      console.log(products);
     } catch (err) {
       console.log(err);
     }
@@ -64,13 +67,10 @@ function Cart() {
       console.log(err);
     }
    }
-      // let price=products.reduce((a,b)=>{
-      //   return a.price+b.price;
-      // });
-      // dispatch(addpriceProduct(price));
+    
    
   
-  console.log(products)
+  
   useEffect(() => {
     getPackage();
     getPhotoger(state.photId);
@@ -120,11 +120,11 @@ function Cart() {
     products.push(...ss)
 
   }
-  // dispatch(addpriceProduct(price))
   return (
     <>
+    {stateAut.isLogin&&
+    <>
       <Navbar />
-      
       <h1 style={{ display: 'block' }} className='text-title section__padding'>Your Order</h1>
      {pay&&<h2 className='text-title section__padding'>Total Price :{state.total}</h2>}
      {!pay&&<div className='cart section__padding'>
@@ -245,8 +245,9 @@ function Cart() {
         <h1 className='price'>Total price ={state.pricePackage+state.pricePhoto+state.priceProduct.reduce(function(acc, val) { return acc + val; }, 0)} $ </h1>
       </div>}
       {pay&&<Payment total={state.total}/>}
-
       <Footer />
+    </>}
+    {!stateAut.isLogin&&<Register/>}
     </>
 
   )

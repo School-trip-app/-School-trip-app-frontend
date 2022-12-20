@@ -3,6 +3,8 @@ import { FaShoppingCart, FaRegBookmark, FaFireAlt } from 'react-icons/fa';
 import './ProductCard.css'
 import { useDispatch } from 'react-redux';
 import { setProdectId } from '../../store/orders';
+import cookies from 'react-cookies';
+
 function ProductCard(props) {
   const dispatch= useDispatch();
   const handlerBook=(id)=>{
@@ -28,7 +30,7 @@ function ProductCard(props) {
               <p className='productRating'>
                 {props.discreption}
               </p>
-              <button id='btn-book' onClick={()=>handlerBook(props.id)}>Book</button>
+              {cookies?.load('capabilities').includes('canBookTrip')&&<button id='btn-book' onClick={()=>handlerBook(props.id)}>Book</button>}
             </div>
           </div>
         </div>
