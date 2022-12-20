@@ -2,7 +2,9 @@ import React from 'react'
 import './header.css';
 import bgbus from '../../assets/h1_hero1.png.webp';
 import bus from '../../assets/car.png.webp';
+
 function Headern() {
+  
   return (
     <div className='header'>
         <h1>LifeLone memories just a <dd>few seconds away</dd></h1>

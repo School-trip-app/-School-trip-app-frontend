@@ -17,6 +17,8 @@ import Product from './pages/Products/Products';
 import TripDetails from './components/tripsDetails/TripDetails';
 import SpecialTrips from './components/specialTrips/SpecialTrips';
 import Cart from './pages/cart/cart';
+import Payment from './components/payment/Payment';
+import Profile from './pages/Profile/Profile';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
@@ -34,6 +36,9 @@ root.render(
         <Route element={<TripDetails />} path='/tripdetails' />
         <Route element={< SpecialTrips />} path='/specialtrips' />
         <Route element={<Cart/>} path='/cart'/>
+        <Route element={<Payment/>} path='/payment'/>
+        <Route element={<Profile />} path='/Profile' />
+
       </Routes>
     </Router>
   </Provider >

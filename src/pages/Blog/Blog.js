@@ -121,9 +121,9 @@ function Memory() {
         <div className='postform'>
           <h1 className='titlepostform'>Add your memory</h1>
           <form className='form' onSubmit={handeldiSubmit}>
-            <input className='input' type='text' maxlength="40" placeholder='Title' name='title' />
-            <textarea className='textarea' type='text' maxlength="250" placeholder='Description' name='description' />
-            <label for="file-upload" name='file' className="custom-file-upload">
+            <input className='input' type='text' maxLength="40" placeholder='Title' name='title' />
+            <textarea className='textarea' type='text' maxLength="250" placeholder='Description' name='description' />
+            <label htmlFor="file-upload" name='file' className="custom-file-upload">
               <i className="fa fa-cloud-upload"></i> <BiImageAdd style={{ color: 'rgb(126, 160, 255)', fontSize: '35px' }} />
             </label>
             <input id="file-upload" type="file"   onChange={handelchange} />
@@ -134,8 +134,8 @@ function Memory() {
         </div>
         {memory && memory.map((item) => {
           return (
-            <>
-              <div className='post'>
+            <div key={item.id}>
+              <div className='post' >
                 <div className='post1'>
                   <img className='imgpost' src={`https://sophisticated-steel-production.up.railway.app/${item.image}`} alt='test' />
                 </div>
@@ -147,7 +147,7 @@ function Memory() {
                       {item.comments !== [] && item.comments.map((item) => {
                         return (
                           <>
-                            <div className='row3'>
+                            <div className='row3' key={item.id}>
                               <p className='coment'>{item.comment}</p>
                               <AiOutlineClose onClick={() => { handeldeletecomment(item.id) }} />
                             </div>
@@ -183,7 +183,7 @@ function Memory() {
                   </form>
                 </div>
               </div>
-            </>
+            </div>
           )
         }
         )}

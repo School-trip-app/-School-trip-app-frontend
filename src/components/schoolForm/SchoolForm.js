@@ -26,6 +26,7 @@ function SchoolForm() {
     formData.append('phonenumber',e.target.phone.value)
     formData.append('gender','male')
     formData.append('image', postData.selectedFile);
+    
     console.log(formData);
 
     await axios.post(`https://sophisticated-steel-production.up.railway.app/user`,formData).then((res) => {
@@ -34,6 +35,9 @@ function SchoolForm() {
       cookies.save('userRole', res.data.userRole);
       cookies.save('username', res.data.username);
       cookies.save('userId', res.data.id);
+      cookies.save('email', res.data.email);
+      cookies.save('phonenumber', res.data.phonenumber);
+      cookies.save('imageprofile', res.data.imageprofile)
       console.log(res.data)
       dispatch(setLogin());
     }).catch((err) => console.log(err || err));

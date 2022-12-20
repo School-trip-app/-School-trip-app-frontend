@@ -33,11 +33,11 @@ function SpecialTrips() {
         <div className='SpecialTrips-body-form'>
           <p>Fill the required trip data that you want to add...</p>
           <form onSubmit={handlerSpecial}>
-            <input type='text' name='place' id='place' placeHolder='Place Name' />
-            <input type='text' name='date' placeHolder='Trip Date' id='date'/>
-            <input type='number' name='number' id='number' placeHolder='Number of students' />
-            <input type='text' name='contact'  id='contact' placeHolder='Contact method' />
-            <input type='textarea' name='details' placeHolder='Other Details' />
+            <input type='text' name='place' id='place' placeholder='Place Name' />
+            <input type='text' name='date' placeholder='Trip Date' id='date'/>
+            <input type='number' name='number' id='number' placeholder='Number of students' />
+            <input type='text' name='contact'  id='contact' placeholder='Contact method' />
+            <input type='textarea' name='details' placeholder='Other Details' />
             <input className='form-button-submit' type='submit' value='Submit your order' />
           </form>
         </div>

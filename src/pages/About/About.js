@@ -26,18 +26,17 @@ function About() {
           </section>
         </div>
         <div className="about" >
-          <section class="bg-light mt-5" id="ABOUT">
+          <section className="bg-light mt-5" id="ABOUT">
             <div id="about-1">
               <div className="content-box-lg" style={{ backgroundColor: 'white' }}>
                 <div className="container">
-                  <div class="col-sm-12 col-md-12 mb-4">
-                    <h3 class="text-center mt-4 text-secondary" style={{ 'padding': '50px' }}>Our Team</h3>
+                  <div className="col-sm-12 col-md-12 mb-4">
+                    <h3 className="text-center mt-4 text-secondary" style={{ 'padding': '50px' }}>Our Team</h3>
                   </div>
-                  <div className="row" style={{ 'display': 'grid', 'marginLeft': 'auto', 'marginRight': 'auto' },
-                    { 'justify-content': 'center' }}>
+                  <div className="row" >
                     <div className="col-md-3" style={{ 'margin': '50px 25px' }}>
                       <div className="text-center" >
-                        <img src={suhaib} class="w-100 rounded-circle" alt="Suhaib" />
+                        <img src={suhaib} className="w-100 rounded-circle" alt="Suhaib" />
                         <h4 className="pt-3" style={{ 'color': ' #00095E' }}>Suhaib Alnaji</h4>
                         <p style={{ 'color': ' #00095E' }}>Web Developer</p>
                         <div className="icons-display">
@@ -77,7 +76,6 @@ function About() {
                           </a></div>
                       </div>
                     </div>
-
                     <div className="col-md-3" style={{ 'margin': '50px 25px' }} >
                       <div className="text-center">
                         <img src={ibraheem} className="w-100 rounded-circle" alt="ibraheem" />

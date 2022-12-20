@@ -24,14 +24,12 @@ export const photographerSlice = createSlice({
 export const addphotographerAsync = (photographer) => (dispatch) => {
     axios.post(url, photographer).then((res) => {
         dispatch(addphotographer(res.data));
-        console.log(res.data);
     });
 }
 
 export const getphotographerAsync = () => (dispatch) => {
     axios.get(url).then((res) => {
         dispatch(getphotographer(res.data));
-        console.log(res.data);
     });
 }
 

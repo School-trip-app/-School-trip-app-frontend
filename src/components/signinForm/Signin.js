@@ -24,7 +24,8 @@ function Signin() {
       cookies.save('userRole', res.data.userRole);
       cookies.save('username', res.data.username);
       cookies.save('userId', res.data.id);
-
+      cookies.save('email', res.data.email);
+      cookies.save('phonenumber', res.data.phonenumber);
       console.log(res.data);
 
     })).catch(err => {
