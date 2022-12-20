@@ -47,3 +47,11 @@
   padding: 13px 30px;
   border-radius: 5px;
 }
+
+.testlogo{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+
+}

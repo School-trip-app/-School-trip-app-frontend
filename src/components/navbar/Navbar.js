@@ -13,6 +13,9 @@ function Navbar() {
     cookies.remove('userRole');
     cookies.remove('capabilities')
     cookies.remove('userId');
+    cookies.remove('email');
+    cookies.remove('phonenumber');
+    cookies.remove('imageprofile')
 
     dispatch(setLogout());
   }
@@ -30,6 +33,7 @@ function Navbar() {
           <Link to='/store'><li>Store</li></Link>
           <Link to='/about'><li>About</li></Link>
           <Link to='/contact'><li>Contact</li></Link>
+          <Link to='/Profile'><li>Profile</li></Link>
           {/* adding number */}
           <li className='call' onClick={handlerLogout}>
           Logout          </li>

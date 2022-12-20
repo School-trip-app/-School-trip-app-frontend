@@ -24,6 +24,9 @@ function Signin() {
       cookies.save('userRole', res.data.userRole);
       cookies.save('username', res.data.username);
       cookies.save('userId', res.data.id);
+      cookies.save('email', res.data.email);
+      cookies.save('phonenumber', res.data.phonenumber);
+      cookies.save('imageprofile', res.data.imageprofile)
 
       console.log(res.data);
 

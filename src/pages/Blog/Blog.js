@@ -11,6 +11,7 @@ import { BiCommentDetail } from 'react-icons/bi';
 import { AiOutlineClose } from 'react-icons/ai';
 import Navbar from '../../components/navbar/Navbar';
 import Footer from '../../components/footer/Footer'
+import cookies from 'react-cookies';
 function Memory() {
 
   const toast = useToast()
@@ -67,7 +68,7 @@ function Memory() {
 
   const handeladdcomment = (e, id) => {
     e.preventDefault();
-    const user = 1;
+    const user = cookies.load('userId');
     const memoryId = id;
     const comment = {
       comment: e.target.comment.value
@@ -83,7 +84,7 @@ function Memory() {
   const handeldiSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData();
-    formData.append('userId', '1');
+    formData.append('userId',cookies.load('userId') );
     formData.append('title', e.target.title.value);
     formData.append('discription', e.target.description.value);
     formData.append('image', image);

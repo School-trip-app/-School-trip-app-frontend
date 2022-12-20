@@ -40,7 +40,7 @@ function Photographers() {
               <div className='Cards'>
                 {photographers.map((item) => (
                   <div key={item.id} className='Card'>
-                    <img src={item.image} alt='Photographers' />
+                    <img className='imgpho' src={item.image} alt='Photographers' />
                     <h3 className='h1-sb' >{item.name}</h3>
                     <p className=' icon '>
                       <FaEnvelope />{item.email}
