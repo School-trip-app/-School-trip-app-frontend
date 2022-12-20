@@ -9,6 +9,8 @@ import cookies from 'react-cookies';
 import { stateAuth } from '../../store/auth';
 import Footer from '../../components/footer/Footer';
 import Register from '../register/Register';
+import axios from 'axios';
+import React,{useEffect} from 'react'
 function TripDetails() {
   const packState = useSelector(stateOrder);
   const stateauth=useSelector(stateAuth);
@@ -19,7 +21,11 @@ function TripDetails() {
 
   const { state } = location;
 
-
+  const getUser = async () => {
+    await axios.get(`https://sophisticated-steel-production.up.railway.app/user/${cookies.load('userId')}`).then((res) => {
+        cookies.save('capabilities',res.data.capabilities);
+    });
+}
   const Hospitalrefactor = (item) => {
     let hospital = []
     for (let i = 0; i < item.length; i++) {
@@ -43,7 +49,9 @@ function TripDetails() {
   };
 
   const Hospital = Hospitalrefactor(state.Hospitals)
-
+ useEffect(() => {
+   getUser()
+ }, [])
   return (
     <>
     {stateauth.isLogin&&

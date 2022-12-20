@@ -7,6 +7,9 @@ import { useSelector, useDispatch } from "react-redux";
 import { getproductAsync, selectProduct } from "../../store/products-re"
 import { stateAuth } from '../../store/auth';
 import Register from '../../components/register/Register';
+import axios from 'axios';
+import cookies from 'react-cookies';
+
 function Product() {
   const dispatch = useDispatch();
   const products = useSelector(selectProduct);
@@ -15,6 +18,15 @@ function Product() {
   useEffect(() => {
     dispatch(getproductAsync());
   }, [dispatch]);
+ 
+  const getUser = async () => {
+    await axios.get(`https://sophisticated-steel-production.up.railway.app/user/${cookies.load('userId')}`).then((res) => {
+        cookies.save('capabilities',res.data.capabilities);
+    });
+}
+  useEffect(()=>{
+    getUser()
+  },[]);
   return (
     <>
     

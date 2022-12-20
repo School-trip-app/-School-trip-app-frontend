@@ -10,14 +10,27 @@ import {MdAttachMoney} from 'react-icons/md'
 import cookies from 'react-cookies';
 import { stateAuth } from '../../store/auth';
 import Register from '../../components/register/Register';
+import axios from 'axios';
+
 function Photographers() {
   const dispatch = useDispatch();
   const handlerBook = (id) => {
     console.log(id);
     dispatch(setPhotId(id));
   }
+  
   const photographers = useSelector(selectPhotographer);
   const state = useSelector(stateAuth);
+  const getUser = async () => {
+    await axios.get(`https://sophisticated-steel-production.up.railway.app/user/${cookies.load('userId')}`).then((res) => {
+        cookies.save('capabilities',res.data.capabilities);
+    });
+}
+  useEffect(()=>{
+    getUser();
+  },[]);
+  
+
   useEffect(() => {
     dispatch(getphotographerAsync());
   }, [dispatch]);

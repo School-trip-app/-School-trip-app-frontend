@@ -8,7 +8,8 @@ import Register from '../../components/register/Register';
 import { useSelector, useDispatch } from "react-redux";
 import { getpackagesAsync, selectpackages } from '../../store/package-re';
 import { useEffect } from 'react';
-
+import axios from 'axios';
+import cookies from 'react-cookies';
 
 function Trips() {
 
@@ -17,12 +18,18 @@ function Trips() {
 
   const dispatch = useDispatch();
   const packages = useSelector(selectpackages);
-
+  const getUser = async () => {
+    await axios.get(`https://sophisticated-steel-production.up.railway.app/user/${cookies.load('userId')}`).then((res) => {
+        cookies.save('capabilities',res.data.capabilities);
+    });
+}
   useEffect(() => {
     dispatch(getpackagesAsync());
   }, [dispatch]);
 
-
+useEffect(()=>{
+  getUser();
+},[])
   return (
     <>
       {state.isLogin &&
