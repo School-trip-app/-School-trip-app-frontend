@@ -4,10 +4,23 @@ import './ProductCard.css'
 import { useDispatch } from 'react-redux';
 import { setProdectId } from '../../store/orders';
 import cookies from 'react-cookies';
+import { useToast } from '@chakra-ui/react'
+
 
 function ProductCard(props) {
+
+  const toast = useToast()
+
   const dispatch= useDispatch();
   const handlerBook=(id)=>{
+    toast({
+      title: 'Product Booked.',
+      description: "for more information check your Cart",
+      status: 'success',
+      duration: 3000,
+      isClosable: true,
+    })
+
     console.log(id);
     dispatch(setProdectId(id))
   }

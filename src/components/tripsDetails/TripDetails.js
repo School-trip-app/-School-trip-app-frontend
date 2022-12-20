@@ -11,7 +11,11 @@ import Footer from '../../components/footer/Footer';
 import Register from '../register/Register';
 import axios from 'axios';
 import React,{useEffect} from 'react'
+import { useToast } from '@chakra-ui/react'
+
 function TripDetails() {
+  const toast = useToast()
+
   const packState = useSelector(stateOrder);
   const stateauth=useSelector(stateAuth);
 
@@ -45,7 +49,15 @@ function TripDetails() {
   }
 
   const handlerBook = () => {
+
     dispatch(setPackId(state.id));
+    toast({
+      title: 'Trip Booked.',
+      description: "for more information check your Cart",
+      status: 'success',
+      duration: 3000,
+      isClosable: true,
+    })
   };
 
   const Hospital = Hospitalrefactor(state.Hospitals)

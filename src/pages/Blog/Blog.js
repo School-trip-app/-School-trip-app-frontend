@@ -4,7 +4,6 @@ import { AiFillLike, AiFillDislike } from 'react-icons/ai';
 import { useState } from 'react';
 import { AiOutlineSend } from 'react-icons/ai';
 import { BiImageAdd } from 'react-icons/bi';
-import { useToast } from '@chakra-ui/react'
 import axios from 'axios';
 import { AiOutlineDelete } from 'react-icons/ai';
 import { BiCommentDetail } from 'react-icons/bi';
@@ -14,10 +13,9 @@ import Footer from '../../components/footer/Footer';
 import { stateAuth } from '../../store/auth';
 import Register from '../../components/register/Register';
 import { useSelector } from "react-redux";
+import cookies from 'react-cookies';
 function Memory() {
   const state = useSelector(stateAuth);
-
-  const toast = useToast()
 
   const [like, setLike] = useState('')
   const [dislike, setDislike] = useState('')
@@ -71,7 +69,7 @@ function Memory() {
 
   const handeladdcomment = (e, id) => {
     e.preventDefault();
-    const user = 1;
+    const user = cookies.load('userId');
     const memoryId = id;
     const comment = {
       comment: e.target.comment.value
@@ -87,7 +85,7 @@ function Memory() {
   const handeldiSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData();
-    formData.append('userId', '1');
+    formData.append('userId', cookies.load('userId'));
     formData.append('title', e.target.title.value);
     formData.append('discription', e.target.description.value);
     formData.append('image', image);
@@ -96,13 +94,7 @@ function Memory() {
         console.log(res.data);
         getallmemory();
       })
-    toast({
-      title: "Memory added.",
-      description: "We've added your memory for the world to see.",
-      status: "success",
-      duration: 2000,
-      isClosable: true,
-    })
+   
   }
   useEffect(() => {
     getallmemory();

@@ -19,30 +19,35 @@ import SpecialTrips from './components/specialTrips/SpecialTrips';
 import Cart from './pages/cart/cart';
 import Payment from './components/payment/Payment';
 import Profile from './pages/Profile/Profile';
+import { ChakraProvider } from '@chakra-ui/react'
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-  <Provider store={store}>
-    <Router>
-      <Routes>
-        <Route element={<App />} path="/home" />
-        <Route element={<Events />} path='/events' />
-        <Route element={<About />} path='/about' />
-        <Route element={<Blog />} path='/blog' />
-        <Route element={<Contact />} path='/contact' />
-        <Route element={<Register />} path='/' />
-        <Route element={<Photographers />} path='/photographers' />
-        <Route element={<Product />} path='/store' />
-        <Route element={<TripDetails />} path='/tripdetails' />
-        <Route element={< SpecialTrips />} path='/specialtrips' />
-        <Route element={<Cart/>} path='/cart'/>
-        <Route element={<Payment/>} path='/payment'/>
-        <Route element={<Profile />} path='/Profile' />
 
-      </Routes>
-    </Router>
-  </Provider >
 
+  <ChakraProvider>
+    <Provider store={store}>
+      <Router>
+        <Routes>
+          <Route element={<App />} path="/home" />
+          <Route element={<Events />} path='/events' />
+          <Route element={<About />} path='/about' />
+          <Route element={<Blog />} path='/blog' />
+          <Route element={<Contact />} path='/contact' />
+          <Route element={<Register />} path='/' />
+          <Route element={<Photographers />} path='/photographers' />
+          <Route element={<Product />} path='/store' />
+          <Route element={<TripDetails />} path='/tripdetails' />
+          <Route element={< SpecialTrips />} path='/specialtrips' />
+          <Route element={<Cart />} path='/cart' />
+          <Route element={<Payment />} path='/payment' />
+          <Route element={<Profile />} path='/Profile' />
+
+        </Routes>
+      </Router>
+    </Provider >
+  </ChakraProvider>
 );
 
 reportWebVitals();
