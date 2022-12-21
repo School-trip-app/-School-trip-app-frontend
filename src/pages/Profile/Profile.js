@@ -54,7 +54,7 @@ function Profile() {
                     <div className="col-sm-4 bg-c-lite-green user-profile">
                         <div className="card-block text-center text-white">
                             <div className="m-b-25">
-                                <img className='img-radius' src={cookies?.load('imageprofile')} alt='UserProfileImage' />
+                                <img className='img-radius' style={{margin:'20px auto'}} src={cookies?.load('imageprofile')} alt='UserProfileImage' />
 
                             </div>
                             <h6 className="f-w-600">WELCOME</h6>

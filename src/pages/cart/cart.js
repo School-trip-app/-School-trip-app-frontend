@@ -125,8 +125,8 @@ function Cart() {
     {stateAut.isLogin&&
     <>
       <Navbar />
-      <h1 style={{ display: 'block' }} className='text-title section__padding'>Your Order</h1>
-     {pay&&<h2 className='text-title section__padding'>Total Price :{state.total}</h2>}
+      <h1 style={{ display: 'block', marginLeft:'30px' }} className='text-title section__padding'>Your trip</h1>
+     {pay&&<h2 className='text-title section__padding'>Total Price :{state.total} $</h2>}
      {!pay&&<div className='cart section__padding'>
         <div>
           <div className='users'>
@@ -242,7 +242,7 @@ function Cart() {
           </div>
           {state.packId && <button className='btn-sent' onClick={sentOrder}>Order Sent</button>}
         </div>
-        <h1 className='price'>Total price ={state.pricePackage+state.pricePhoto+state.priceProduct.reduce(function(acc, val) { return acc + val; }, 0)} $ </h1>
+        <h1 className='price' style={{fontSize:'30px'}}>Total price ={state.pricePackage+state.pricePhoto+state.priceProduct.reduce(function(acc, val) { return acc + val; }, 0)} $ </h1>
       </div>}
       {pay&&<Payment total={state.total}/>}
       <Footer />

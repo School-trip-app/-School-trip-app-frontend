@@ -34,7 +34,7 @@ function ProductCard(props) {
           <FaFireAlt className={"productCard_fastSelling"} />
 
           <div className='productCard_content'>
-            <h3 className='productName'>{props.name}</h3>
+            <h3 className='productName' style={{marginTop: '53px'}}>{props.name}</h3>
             <div className='displayStack_1'>
               <div className='productPrice'>${props.price}</div>
               <div className='productSales'>category : {props.category}</div>

@@ -48,7 +48,7 @@ function SchoolForm() {
       <input type='email' id='email' name='email' placeholder='E-mail' className='formInput' required ></input>
       <input type='text' name='phone' id='phone' placeholder='phone number' className='formInput' required />
       <input type='password' id='password' name='password' placeholder='Password' className='formInput' required ></input>
-      <input type='file' id='files' name='file' onChange={(e)=>handlerFile(e)}/>
+      <input type='file' style={{marginLeft:'38px'}} id='files' name='file' onChange={(e)=>handlerFile(e)}/>
       <input type='submit' name='sub' value='CONTINUE' className='formSubmit' id='sub'></input>
     </form>
   )
