@@ -1,0 +1,82 @@
+.images-travels {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+  gap: 0;
+  align-items: center;
+  min-height: 200px;
+
+
+}
+
+.div-one-image,
+.div-two-image,
+.div-three-image,
+.div-four-image,
+.div-five-image {
+  width: 100%;
+;
+  height: 100%;
+}
+
+.div-one-image {
+
+
+  background: url('../../assets/amman-jordan-08bcc7bf3103.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+.div-two-image {
+  background: url('../../assets/Ajloun_Castle.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+.div-three-image {
+  background: url('../../assets/Umm-Qais.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+.div-four-image {
+  background: url('../../assets/istockphoto-1170941515-612x612.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+.div-five-image {
+  background: url('../../assets/dead-sea-jordan.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+
+.div-one-image a,
+.div-two-image a,
+.div-three-image a,
+.div-four-image a,
+.div-five-image a {
+  color: rgba(0, 0, 255, 0) !important;
+  font-size: xx-large;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  transition: 0.8s;
+  -webkit-transition: 0.8s;
+  -moz-transition: 0.8s;
+  -ms-transition: 0.8s;
+  -o-transition: 0.8s;
+}
+
+.div-one-image a:hover,
+.div-two-image a:hover,
+.div-three-image a:hover,
+.div-four-image a:hover,
+.div-five-image a:hover {
+  color: rgb(255, 200, 0) !important;
+  background-color: rgba(14, 25, 61, 0.541);
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}

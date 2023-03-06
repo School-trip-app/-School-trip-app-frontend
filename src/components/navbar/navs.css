@@ -1,0 +1,98 @@
+@import '../../mixin/mixin.scss';
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0px;
+    z-index: 1000;
+    background-color: white;
+    transition-delay: 1000ms;
+    border-bottom: 1px solid #3f3fa02b;
+}
+.navbar .nav-list ul {
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0 !important;
+}
+
+.navbar .nav-list ul li {
+                position: relative;
+                margin-left: 30px;
+                font-family: "Josefin Sans", sans-serif;
+                color: var(--color-tag);
+                font-weight: 500;
+                font-size: 16px;
+                transition: all .3s ease-out 0s;
+                cursor: pointer;
+}
+.navbar .nav-list ul li:hover::after {
+                    width: 100%;
+                }
+.navbar .nav-list ul li:hover {
+                    color: var(--color-blue);
+                }
+
+.navbar .nav-list ul li::after {
+                    content: "";
+                    position: absolute;
+                    width: 0;
+                    bottom: -5px;
+                    left: -1px;
+                    height: 2px;
+                    z-index: 1;
+                    transition: all .4s ease-out 0s;
+                    background: #7EA0FF;
+                    background-color: var(--color-blue);
+                }
+
+.navbar .nav-list ul .call {
+                color: var(--color-white);
+                background: var(--color-yellow);
+                padding: 13px 30px;
+                border-radius: 5px;
+            }
+
+
+
+.logo-image-pic {
+    width: 40%;
+    height: 40%;
+}
+.logo {
+    width: 30%;
+}
+.down-menu::after{
+                    content: "";
+                    position: absolute;
+                    width: 0;
+                    bottom: -5px;
+                    left: -1px;
+                    height: 2px;
+                    z-index: 1;
+                    transition: all .4s ease-out 0s;
+                    background: #7EA0FF;
+                    background-color: var(--color-blue);
+                    -webkit-transition: all .4s ease-out 0s;
+                    -moz-transition: all .4s ease-out 0s;
+                    -ms-transition: all .4s ease-out 0s;
+                    -o-transition: all .4s ease-out 0s;
+}
+.down-menu:hover::after {
+    width: 0 !important;
+}
+.down-menu:hover {
+    color: var(--color-blue);
+}
+.down-menu{
+    padding: 10px;
+}
+.dropdown button{
+    margin-left: 30px;
+    font-family: "Josefin Sans", sans-serif;
+    color: var(--color-tag);
+    font-weight: 500;
+    font-size: 16px;
+    transition: all .3s ease-out 0s;
+    cursor: pointer;
+}

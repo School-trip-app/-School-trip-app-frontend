@@ -1,0 +1,253 @@
+.post {
+    width: 1000px;
+    height: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 40px auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.imgpost {
+    width: 400px;
+    height: 400px;
+    border-radius: 10px;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.titlepost {
+    font-size: 30px;
+    font-weight: 700;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.prapost {
+    font-size: 20px;
+    font-weight: 400;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.row2 {
+    flex-direction: column;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 80px;
+
+}
+
+.row1 {
+    width: 100%;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.post1 {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.post2 {
+    display: flex;
+    width: 600px;
+    height: 300px;
+    padding: 0px 20px;
+    padding-left: 0% !important;
+}
+
+.like {
+
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(126, 160, 255);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.unlike {
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(126, 160, 255);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.postform {
+    width: 1000px;
+    height: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    align-items: left;
+    position: left;
+}
+
+.titlepostform {
+    font-size: 30px;
+    font-weight: 700;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.form {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: left;
+    align-items: center;
+    position: left;
+    margin-top: 25px;
+}
+
+
+
+.input {
+    width: 250px !important;
+    height: 40px;
+    border-radius: 5px;
+    padding: 5px 10px !important;
+    font-size: 16px;
+    outline: none;
+    margin: 0% 0% 0% 0% !important;
+    left: 0% !important;
+}
+
+.textarea {
+    width: 400px;
+    height: 40px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 0% 0% 0% 0% !important;
+    font-size: 16px;
+    outline: none;
+}
+
+#file-upload[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 0px;
+    margin: 0px;
+}
+
+.icon-blog {
+    width: 40px;
+    height: 40px;
+    font-size: 12px;
+    background-color: #fff;
+    border-style: none;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-left: 30px;
+}
+
+
+.divcomment {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px;
+
+}
+
+.inputcomment {
+    width: 510px !important;
+    height: 40px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 0 10px;
+    font-size: 16px;
+    outline: none;
+    margin: 0px 0px 10px 0px;
+}
+
+.post3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.coment {
+    margin: 0% !important;
+}
+
+.row3 {
+    width: 510px !important;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: #000;
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-background-about {
+    width: 100%;
+    height: 440px;
+    /*  */
+    background-image: url('https://images.unsplash.com/photo-1534531688091-a458257992cb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+    background-size: cover;
+    background-position: center -450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.top-background-about p {
+    color: rgb(255, 255, 255);
+    font-size: xxx-large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: bolder;
+    text-shadow: 3px 3px 3px rgb(0, 0, 0);
+}
