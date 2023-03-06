@@ -53,7 +53,7 @@ export default function PaymentForm({total}) {
         if (!error) {
             try {
                 const { id } = paymentMethod
-                const response = await axios.post("https://payment-production-47f7.up.railway.app/payment", {
+                const response = await axios.post("http://localhost:4005/payment", {
                     amount: numTotal,
                     id,
                     description: cookies.load('email')

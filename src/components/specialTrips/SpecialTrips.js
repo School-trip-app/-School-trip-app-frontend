@@ -16,7 +16,7 @@ function SpecialTrips() {
         userId:cookies.load('userId')
     }
     console.log(trip)
-    await axios.post('https://sophisticated-steel-production.up.railway.app/tripRequest',trip).then((res)=>{
+    await axios.post('http://localhost:4005/tripRequest',trip).then((res)=>{
         console.log(res.data);
         alert('sent')
         e.target.reset();

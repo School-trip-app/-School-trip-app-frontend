@@ -33,7 +33,7 @@ function Photographers() {
   const photographers = useSelector(selectPhotographer);
   const state = useSelector(stateAuth);
   const getUser = async () => {
-    await axios.get(`https://sophisticated-steel-production.up.railway.app/user/${cookies.load('userId')}`).then((res) => {
+    await axios.get(`http://localhost:4005/user/${cookies.load('userId')}`).then((res) => {
       cookies.save('capabilities', res.data.capabilities);
     });
   }

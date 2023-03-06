@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const url = "https://sophisticated-steel-production.up.railway.app/photographer";
+const url = "http://localhost:4005/photographer";
 
 
 

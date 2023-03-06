@@ -28,18 +28,18 @@ function Memory() {
   }
 
   const getallmemory = () => {
-    axios.get('https://sophisticated-steel-production.up.railway.app/memory')
+    axios.get('http://localhost:4005/memory')
       .then(res => {
         setMemory(res.data);
       })
   }
 
   const handellike = (id) => {
-    axios.patch(`https://sophisticated-steel-production.up.railway.app/like/${id}`)
+    axios.patch(`http://localhost:4005/like/${id}`)
     getallmemory();
   }
   const handeldislike = (id) => {
-    axios.patch(`https://sophisticated-steel-production.up.railway.app/dislike/${id}`)
+    axios.patch(`http://localhost:4005/dislike/${id}`)
     getallmemory();
 
   }
@@ -58,12 +58,12 @@ function Memory() {
   }
 
   const handledelete = (id) => {
-    axios.delete(`https://sophisticated-steel-production.up.railway.app/memory/${id}`)
+    axios.delete(`http://localhost:4005/memory/${id}`)
     getallmemory();
   }
 
   const handeldeletecomment = (id) => {
-    axios.delete(`https://sophisticated-steel-production.up.railway.app/comment/${id}`)
+    axios.delete(`http://localhost:4005/comment/${id}`)
     getallmemory();
   }
 
@@ -76,7 +76,7 @@ function Memory() {
     }
 
 
-    axios.post(`https://sophisticated-steel-production.up.railway.app/comment/${user}/${memoryId}`, comment)
+    axios.post(`http://localhost:4005/comment/${user}/${memoryId}`, comment)
     getallmemory();
   }
 
@@ -89,7 +89,7 @@ function Memory() {
     formData.append('title', e.target.title.value);
     formData.append('discription', e.target.description.value);
     formData.append('image', image);
-    axios.post('https://sophisticated-steel-production.up.railway.app/memory', formData)
+    axios.post('http://localhost:4005/memory', formData)
       .then(res => {
         console.log(res.data);
         getallmemory();
@@ -135,7 +135,7 @@ function Memory() {
             <div key={item.id}>
               <div className='post' >
                 <div className='post1'>
-                  <img className='imgpost' src={`https://sophisticated-steel-production.up.railway.app/${item.image}`} alt='test' />
+                  <img className='imgpost' src={`http://localhost:4005/${item.image}`} alt='test' />
                 </div>
                 <div className='divcomment'>
                   <div className='post2'>

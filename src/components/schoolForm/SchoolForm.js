@@ -29,7 +29,7 @@ function SchoolForm() {
     
     console.log(formData);
 
-    await axios.post(`https://sophisticated-steel-production.up.railway.app/user`,formData).then((res) => {
+    await axios.post(`http://localhost:4005/user`,formData).then((res) => {
       cookies.save('capabilities', res.data.capabilities);
       cookies.save('token', res.data.token);
       cookies.save('userRole', res.data.userRole);

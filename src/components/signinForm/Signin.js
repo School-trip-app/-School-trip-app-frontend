@@ -15,7 +15,7 @@ function Signin() {
       password: e.target.password.value
     }
     const encodeduser = base64.encode(`${user.username}:${user.password}`);
-    await axios.post('https://sophisticated-steel-production.up.railway.app/signin', {}, {
+    await axios.post('http://localhost:4005/signin', {}, {
       headers: {
         Authorization: `Basic ${encodeduser}`
       }
@@ -27,7 +27,7 @@ function Signin() {
       cookies.save('username', res.data.username);
       cookies.save('userId', res.data.id);
       cookies.save('email', res.data.email);
-      cookies.save('imageprofile',`https://sophisticated-steel-production.up.railway.app/${res.data.imageprofile}`);
+      cookies.save('imageprofile',`http://localhost:4005/${res.data.imageprofile}`);
       cookies.save('phonenumber', res.data.phonenumber);
 
     })).catch(err => {

@@ -15,8 +15,8 @@ function Profile() {
     const state = useSelector(stateAuth);
 
     const getUser = async () => {
-        await axios.get(`https://sophisticated-steel-production.up.railway.app/user/${cookies.load('userId')}`).then((res) => {
-            cookies.save('imageprofile', `https://sophisticated-steel-production.up.railway.app/${res.data.imageprofile}`);
+        await axios.get(`http://localhost:4005/user/${cookies.load('userId')}`).then((res) => {
+            cookies.save('imageprofile', `http://localhost:4005/${res.data.imageprofile}`);
         });
     }
 
@@ -28,7 +28,7 @@ function Profile() {
         formData.append('image', e.target.files[0]);
 
 
-        axios.put(`https://sophisticated-steel-production.up.railway.app/users/${id}`, formData,
+        axios.put(`http://localhost:4005/users/${id}`, formData,
             {
                 headers: {
                     Authorization: `Bearer ${cookies.load('token')}`

@@ -20,7 +20,7 @@ function Cart() {
   let products = [];
   const dispatch = useDispatch();
   const getPackage = async () => {
-    await axios.get('https://sophisticated-steel-production.up.railway.app/package').then((res) => {
+    await axios.get('http://localhost:4005/package').then((res) => {
       let filterPackage = res.data.find((data) => {
         return data.id === state.packId;
       });
@@ -29,7 +29,7 @@ function Cart() {
     }).catch((err) => console.log(err));
   }
   const getPhotoger = async (id) => {
-    await axios.get(`https://sophisticated-steel-production.up.railway.app/photographer/${id}`).then(res => {
+    await axios.get(`http://localhost:4005/photographer/${id}`).then(res => {
       setphoter(res.data);
       console.log("photage price>>>", res.data.price)
       dispatch(addpricePhoto(res.data.price))
@@ -41,7 +41,7 @@ function Cart() {
   const getProduct = async () => {
     try {
       if (state.prodectId.length !== 0) {
-        await axios.get(`https://sophisticated-steel-production.up.railway.app/product`).then(res => {
+        await axios.get(`http://localhost:4005/product`).then(res => {
           setprodct(res.data);
         });
       }
@@ -54,7 +54,7 @@ function Cart() {
     try {
       if (state.prodectId.length !== 0) {
         for (let i = 0; i < state.prodectId?.length; i++) { 
-           await axios.get(`https://sophisticated-steel-production.up.railway.app/product/${state.prodectId[i]}`).then(res=>{
+           await axios.get(`http://localhost:4005/product/${state.prodectId[i]}`).then(res=>{
              dispatch(addpriceProduct(res.data.price));
              
 
@@ -104,7 +104,7 @@ function Cart() {
       productIds: state.prodectId
     };
     console.log(order);
-    await axios.post(`https://sophisticated-steel-production.up.railway.app/package/order/${cookies.load('userId')}/${state.packId}`, order).then((res) => {
+    await axios.post(`http://localhost:4005/package/order/${cookies.load('userId')}/${state.packId}`, order).then((res) => {
       console.log(res.data);
       setPay(true);
       dispatch(addTotalPrice(state.pricePackage+state.pricePhoto+state.priceProduct.reduce(function(acc, val) { return acc + val; }, 0)))
