@@ -18,7 +18,7 @@ function StudentForm() {
       phonenumber: e.target.phone.value,
       gender: e.target.gender.value,
     }
-    await axios.post('http://localhost:4005/user', user).then((res) => {
+    await axios.post('http://localhost:4006/user', user).then((res) => {
       cookies.save('capabilities', res.data.capabilities);
       cookies.save('token', res.data.token);
       cookies.save('userRole', res.data.userRole);

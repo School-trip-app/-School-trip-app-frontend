@@ -8,11 +8,11 @@ import { setPhotId } from '../../store/orders';
 import { getphotographerAsync, selectPhotographer } from "../../store/Photographers-re"
 import { MdAttachMoney } from 'react-icons/md'
 import cookies from 'react-cookies';
-import { stateAuth } from '../../store/auth';
+import { stateAuth, setLoadingOff, setLoadingOn } from '../../store/auth';
 import Register from '../../components/register/Register';
 import axios from 'axios';
-import { useToast } from '@chakra-ui/react'
-
+import { useToast } from '@chakra-ui/react';
+import Loader from '../../components/Loader/Loader';
 function Photographers() {
   const toast = useToast()
 
@@ -33,9 +33,14 @@ function Photographers() {
   const photographers = useSelector(selectPhotographer);
   const state = useSelector(stateAuth);
   const getUser = async () => {
-    await axios.get(`http://localhost:4005/user/${cookies.load('userId')}`).then((res) => {
+    dispatch(setLoadingOn());
+    await axios.get(`http://localhost:4006/user/${cookies.load('userId')}`).then((res) => {
       cookies.save('capabilities', res.data.capabilities);
-    });
+      dispatch(setLoadingOff())
+    }).catch((err) => {
+      console.log(err);
+      dispatch(setLoadingOff());
+    })
   }
   useEffect(() => {
     getUser();
@@ -50,6 +55,7 @@ function Photographers() {
     <>
       {state.isLogin &&
         <>
+          {state.isLoading && <Loader />}
           <Navbar />
           <div>
             <section className='top-background-photographer'>

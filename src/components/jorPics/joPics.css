@@ -1,6 +1,6 @@
 .images-travels {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
   gap: 0;
   align-items: center;
   min-height: 200px;
@@ -18,7 +18,7 @@
   height: 100%;
 }
 
-.div-one-image {
+/* .div-one-image {
 
 
   background: url('../../assets/amman-jordan-08bcc7bf3103.jpg');
@@ -48,7 +48,7 @@
   background: url('../../assets/dead-sea-jordan.jpg');
   background-size: cover;
   background-position: center center;
-}
+} */
 
 
 .div-one-image a,
@@ -68,7 +68,7 @@
   -o-transition: 0.8s;
 }
 
-.div-one-image a:hover,
+/* .div-one-image a:hover,
 .div-two-image a:hover,
 .div-three-image a:hover,
 .div-four-image a:hover,
@@ -79,4 +79,4 @@
   height: 100%;
   align-items: center;
   justify-content: center;
-}
+} */

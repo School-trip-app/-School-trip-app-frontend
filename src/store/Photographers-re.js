@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
-
-const url = "http://localhost:4005/photographer";
+import { setLoadingOff, setLoadingOn } from "./auth";
+const url = "http://localhost:4006/photographer";
 
 
 
@@ -21,18 +21,28 @@ export const photographerSlice = createSlice({
     }
 });
 
-export const addphotographerAsync = (photographer) => (dispatch) => {
-    axios.post(url, photographer).then((res) => {
+export const addphotographerAsync = (photographer) => async (dispatch) => {
+    dispatch(setLoadingOn());
+    await axios.post(url, photographer).then((res) => {
         dispatch(addphotographer(res.data));
-    });
+        dispatch(setLoadingOn());
+    }).catch((err) => {
+        console.log(err);
+        dispatch(setLoadingOff());
+    })
 }
 
-export const getphotographerAsync = () => (dispatch) => {
-    axios.get(url).then((res) => {
+export const getphotographerAsync = () => async (dispatch) => {
+    dispatch(setLoadingOn());
+    await axios.get(url).then((res) => {
         dispatch(getphotographer(res.data));
+        dispatch(setLoadingOff());
+    }).catch((err) => {
+        console.log(err);
+        dispatch(setLoadingOff());
     });
 }
 
-export const { addphotographer , getphotographer } = photographerSlice.actions;
+export const { addphotographer, getphotographer } = photographerSlice.actions;
 export const selectPhotographer = (state) => state.photographer.data;
 export default photographerSlice.reducer;

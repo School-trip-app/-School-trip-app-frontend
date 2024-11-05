@@ -20,6 +20,7 @@ function footer() {
             <a href='£'><FaGithub /></a>
           </div>
         </div>
+        <div className='footer_grid'>
         <div className='footer-top-2d'>
           <div className='footer-slice'>
             <h4>Navigation</h4>
@@ -45,6 +46,7 @@ function footer() {
             <p className='phone'>+962(77) 998-8665</p>
           </div>
         </div>
+      </div>
       </div>
       <div className='footer-middle'>
         <p>Copyright ©2022 All rights reserved</p>
