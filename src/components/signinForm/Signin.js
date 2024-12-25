@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import base64 from 'base-64';
 import axios from 'axios';
-import { setLogin } from '../../store/auth';
-import { useDispatch } from 'react-redux';
+import { setLogin, setLoadingOff, setLoadingOn } from '../../store/auth';
+import { useDispatch, useSelector } from 'react-redux';
 import cookies from 'react-cookies';
-
+import Loader from '../Loader/Loader';
 function Signin() {
   const dispatch = useDispatch();
+  const stateLoading = useSelector(state => state.auth.auth)
   const [error, setError] = useState('');
   const handlerSubmit = async (e) => {
     e.preventDefault();
@@ -15,7 +16,8 @@ function Signin() {
       password: e.target.password.value
     }
     const encodeduser = base64.encode(`${user.username}:${user.password}`);
-    await axios.post('http://localhost:4005/signin', {}, {
+    dispatch(setLoadingOn());
+    await axios.post('https://school-trip-app-backend.onrender.com/signin', {}, {
       headers: {
         Authorization: `Basic ${encodeduser}`
       }
@@ -26,13 +28,16 @@ function Signin() {
       cookies.save('userRole', res.data.userRole);
       cookies.save('username', res.data.username);
       cookies.save('userId', res.data.id);
+      localStorage.setItem("userId",JSON.parse(res.data.id));
       cookies.save('email', res.data.email);
-      cookies.save('imageprofile',`http://localhost:4005/${res.data.imageprofile}`);
+      cookies.save('imageprofile', `https://school-trip-app-backend.onrender.com/${res.data.imageprofile}`);
       cookies.save('phonenumber', res.data.phonenumber);
+      dispatch(setLoadingOff())
 
     })).catch(err => {
       console.log(err.response.data);
       setError(err.response.data);
+      dispatch(setLoadingOff());
     })
   }
   return (
@@ -43,7 +48,8 @@ function Signin() {
         <input type='password' name='password' id='password' placeholder='Password' className='formInput' required ></input>
         <input type='submit' name='submit' value='CONTINUE' className='formSubmit' ></input>
       </form>
-      <p id='errMsg'>{error!==''&&error}</p>
+      <p id='errMsg'>{error !== '' && error}</p>
+      {stateLoading.isLoading && <Loader />}
     </div>
   )
 }

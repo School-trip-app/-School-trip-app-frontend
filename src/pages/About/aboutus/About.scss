@@ -6,7 +6,7 @@
     align-items: center;
 
     .aboutus-text {
-        max-width: 41.666667%;
+        width: 60%;
 
         h2 {
             color: #7EA0FF;
@@ -70,3 +70,23 @@
         width: 600px;
     }
 }
+
+@media(max-width:1280px){
+    .aboutus-section{
+        flex-direction: column;
+    }
+    .aboutus-text{
+        width:100%;
+    }
+    .aboutus-section {
+     .aboutus-text{
+        h1{
+            font-size:30px;
+        }
+        button{
+            width:100%;
+            margin:20px auto;
+        }
+     }
+    }
+} 

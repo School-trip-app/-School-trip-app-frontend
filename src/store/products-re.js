@@ -1,7 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
-const url = "http://localhost:4005/product";
+import { setLoadingOff, setLoadingOn } from "./auth";
 
+const url = "https://school-trip-app-backend.onrender.com/product";
 
 export const productSlice = createSlice({
     name: "product",
@@ -18,16 +19,26 @@ export const productSlice = createSlice({
     }
 });
 
-export const addproductAsync = (product) => (dispatch) => {
-    axios.post(url, product).then((res) => {
+export const addproductAsync = (product) => async (dispatch) => {
+    dispatch(setLoadingOn())
+    await axios.post(url, product).then((res) => {
         dispatch(addproduct(res.data));
-    });
+        dispatch(setLoadingOff());
+    }).catch((err) => {
+        console.log(err);
+        dispatch(setLoadingOff());
+    })
 };
 
-export const getproductAsync = () => (dispatch) => {
-    axios.get(url).then((res) => {
+export const getproductAsync = () => async (dispatch) => {
+    dispatch(setLoadingOn());
+    await axios.get(url).then((res) => {
         dispatch(getproduct(res.data));
-    });
+        dispatch(setLoadingOff());
+    }).catch((err) => {
+        console.log(err);
+        dispatch(setLoadingOff());
+    })
 };
 
 

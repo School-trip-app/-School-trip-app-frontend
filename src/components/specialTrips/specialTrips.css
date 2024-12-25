@@ -63,9 +63,8 @@
   }
   
   .form-button-submit {
-    width: 50% !important;
+    width:100% !important;
     align-self: center !important;
-    margin-left: 110px !important;
     margin-top: 25px !important;
     margin-top: 40px;
     background: #FFC800;
@@ -80,4 +79,18 @@
   
   .form-button-submit:hover {
     box-shadow: 1px 1px 5px rgb(0, 9, 94);
+  }
+
+  @media(max-width:480px){
+    .SpecialTrips-body-image{
+      display: none;
+    }
+    
+    .SpecialTrips-body-form input,
+    .SpecialTrips-body-form{
+      width: 100% !important;
+    }
+    .upcome{
+      font-size: 30px !important;
+    }
   }

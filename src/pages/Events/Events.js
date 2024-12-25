@@ -3,13 +3,14 @@ import Card from '../../pages/Events/card/Card';
 import './trip.css';
 import Navbar from '../../components/navbar/Navbar';
 import Footer from '../../components/footer/Footer';
-import { stateAuth } from '../../store/auth';
+import { stateAuth, setLoadingOff, setLoadingOn } from '../../store/auth';
 import Register from '../../components/register/Register';
 import { useSelector, useDispatch } from "react-redux";
 import { getpackagesAsync, selectpackages } from '../../store/package-re';
 import { useEffect } from 'react';
 import axios from 'axios';
 import cookies from 'react-cookies';
+import Loader from '../../components/Loader/Loader';
 
 function Trips() {
 
@@ -19,21 +20,29 @@ function Trips() {
   const dispatch = useDispatch();
   const packages = useSelector(selectpackages);
   const getUser = async () => {
-    await axios.get(`http://localhost:4005/user/${cookies.load('userId')}`).then((res) => {
-        cookies.save('capabilities',res.data.capabilities);
-    });
-}
+    dispatch(setLoadingOn())
+    await axios.get(`https://school-trip-app-backend.onrender.com/user/${cookies.load('userId')}`).then((res) => {
+      cookies.save('capabilities', res.data.capabilities);
+      dispatch(setLoadingOff())
+
+    }).catch((err) => {
+      console.log(err);
+      dispatch(setLoadingOff())
+
+    })
+  }
   useEffect(() => {
     dispatch(getpackagesAsync());
   }, [dispatch]);
 
-useEffect(()=>{
-  getUser();
-},[])
+  useEffect(() => {
+    getUser();
+  }, [])
   return (
     <>
       {state.isLogin &&
         <>
+          {state.isLoading && <Loader />}
           <Navbar />
           <div className='trips-page'>
             <section className='top-background-trips'>

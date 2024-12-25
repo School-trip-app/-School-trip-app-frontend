@@ -1,6 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
-const url = "http://localhost:4005/package";
+import { setLoadingOff, setLoadingOn } from './auth';
+
+const url = "https://school-trip-app-backend.onrender.com/package";
 
 
 export const packagesSlice = createSlice({
@@ -18,11 +20,18 @@ export const packagesSlice = createSlice({
 
 
 export const getpackagesAsync = () => (dispatch) => {
+    dispatch(setLoadingOn());
     axios.get(url).then((res) => {
         dispatch(getpackages(res.data));
+        dispatch(setLoadingOff());
+
+    }).catch((err) => {
+        dispatch(setLoadingOff());
+        console.log(err)
     });
+
 }
 
-export const { getpackages  } = packagesSlice.actions;   
+export const { getpackages } = packagesSlice.actions;
 export const selectpackages = (state) => state.packages.data;
 export default packagesSlice.reducer;
